@@ -208,7 +208,7 @@ document.addEventListener('keydown', function (event) {
         const current_html = document.documentElement.outerHTML;
 
         // Get the current domain and path
-        const domain = window.location.hostname; // This will get 'boster.org'
+        const domain = window.location.hostname; // This will get 'nesen.org'
         const path = window.location.pathname; // This will get '/category/item.html'
 
         // Extract category from the path

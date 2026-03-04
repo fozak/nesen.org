@@ -1,6 +1,6 @@
 /* =========================================================
    HORIZONTAL EVENT LIST CARDS
-   Add this AFTER boster.css in your <head>
+   Add this AFTER nesen.css in your <head>
    All selectors are scoped to .evh to avoid conflicts
    ========================================================= */
 
@@ -11,7 +11,7 @@
   width: 90%;
   min-height: 180px;
   overflow: hidden;
-  /* inherits .card border-radius, shadow, border from boster.css §6 */
+  /* inherits .card border-radius, shadow, border from nesen.css §6 */
 }
 
 /* ── Image column ── */
@@ -44,7 +44,7 @@
 .evh--v3 .evh__img-overlay { background: linear-gradient(to right, rgba(36,70,200,.35) 0%, rgba(79,209,197,.12) 100%); }
 
 /* ── Reuse existing .event-card__date — only override position ── */
-/* boster.css puts it bottom:12px left:12px — we move it to top-left */
+/* nesen.css puts it bottom:12px left:12px — we move it to top-left */
 .evh .event-card__date {
   top: 14px !important;
   bottom: auto !important;
@@ -52,7 +52,7 @@
   z-index: 2;
 }
 
-/* ── Status pill stays top-right (already correct in boster.css) ── */
+/* ── Status pill stays top-right (already correct in nesen.css) ── */
 .evh .event-card__status {
   z-index: 2;
 }
@@ -94,7 +94,7 @@
 }
 
 .evh__title {
-  font-size: 22px !important;        /* override h3 from boster.css §4 (30px) */
+  font-size: 22px !important;        /* override h3 from nesen.css §4 (30px) */
   font-weight: 700;
   color: var(--blue-700);
   margin: 0;

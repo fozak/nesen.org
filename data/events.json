@@ -21,7 +21,7 @@
   "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
    "presenter": "New England Conservatory",
   "city": "Boston",
-  "source": "boster.org"
+  "source": "nesen.org"
 },
 {
   "id": "event03052618",
@@ -41,7 +41,7 @@
   "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
   "presenter": "Venture Café",
   "city": "Cambridge",
-  "source": "boster.org"
+  "source": "nesen.org"
 },
 {
     "id": "event03102620",
@@ -60,7 +60,7 @@
     "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
     "presenter": "New England Conservatory",
     "city": "Boston",
-    "source": "boster.org"
+    "source": "nesen.org"
   },
   {
   "id": "event03122618",
@@ -80,6 +80,6 @@
   "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
   "presenter": "Venture Café",
   "city": "Cambridge",
-  "source": "boster.org"
+  "source": "nesen.org"
 }
 ]
