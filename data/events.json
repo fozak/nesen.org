@@ -1,0 +1,85 @@
+[ 
+    {
+  "id": "event03032619",
+  "title": "Community at the concert. All of Scarlatti’s Sonatas",
+  "description": "Students in the Pianos department present Scarlatti Sonatas: K.90 through K.120.",
+  "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=300&fit=crop",
+  "status": "",
+  "tags": ["Free", "Concert", "In-Person"],
+  "location": "Jordan Hall, Boston",
+  "going": 3,
+  "avatars": 
+  ["/images/dennis-didkovskiy.jpg",
+   "/images/elena-logacheva.jpg",
+"PH"],
+
+  "calendar": {
+    "google": "http://www.google.com/calendar/event?action=TEMPLATE&text=All+of+Scarlatti%27s+Sonatas+at+New+England+Conservatory&dates=20260304T003000Z/20260304T003000Z&sprop=website:https%3A%2F%2Fwww.classical-scene.com&sprop=name:All+of+Scarlatti%27s+Sonatas&location=New+England+Conservatory%2C+Jordan+Hall%2C+Boston%2C+US&details=Notes%3A+Students+in+the+Pianos+department+present%0D%0AScarlatti+Sonatas:+K.90+through+K.120+All+Ages&trp=true",
+    "ical": "https://www.classical-scene.com/?feed=gigpress-ical&show_id=25477"
+  },
+   "registerUrl": "https://necmusic.edu/events/nec-piano-department-concert-no-4-scarlatti-sonatas/",
+  "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
+   "presenter": "New England Conservatory",
+  "city": "Boston",
+  "source": "boster.org"
+},
+{
+  "id": "event03052618",
+  "title": "Thursday Gathering - March 5, 2026",
+  "description": "Join our weekly community gathering for networking, discussions, and workshops focused on technology and innovation at Venture Café, Cambridge.",
+  "image": "https://capitalprojects.mit.edu/sites/default/files/styles/project_full_540x348/public/MIT-Site5_2021AV67-072-WeissManfredi.jpg?itok=gtXOn0Ef",
+  "status": "",
+  "tags": ["Free","Community","In-Person"],
+  "location": "Venture Café, One Broadway, 5th floor, Cambridge, MA 02142",
+  "going": 12,
+  "avatars": ["/images/grigorii-menshikov.jpg","/images/dennis-didkovskiy.jpg","/images/elena-logacheva.jpg","PH"],
+  "calendar": {
+    "google": "https://www.google.com/calendar/event?action=TEMPLATE&text=Thursday+Gathering+-+March+5,+2026&dates=20260305T180000/20260305T200000&location=Venture+Café,+One+Broadway,+Cambridge,+MA,+US&details=Join+our+weekly+community+gathering+for+networking,+discussions,+and+workshops+focused+on+technology+and+innovation.&trp=true",
+    "ical": "https://community.venturecafecambridge.org/events/0d237eff-54e3-4559-ae43-3387acdcf45c"
+  },
+  "registerUrl": "https://community.venturecafecambridge.org/events/0d237eff-54e3-4559-ae43-3387acdcf45c",
+  "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
+  "presenter": "Venture Café",
+  "city": "Cambridge",
+  "source": "boster.org"
+},
+{
+    "id": "event03102620",
+    "title": "Commmunity at the concert: Jingtong Zhang '26 BM, Harp",
+    "description": "NEC's students meet one-on-one each week with a faculty artist to perfect their craft. As each one leaves NEC to make their mark in the performance world, they present a full, professional recital that is free and open to the public.",
+    "image": "https://www.bowdoinfestival.org/contents/media/2020/06/junehan-800x425.jpg",
+    "status": "",
+    "tags": ["Free","In-Person"],
+    "location": "Eben Jordan Hall, Boston",
+    "going": 3,
+    "avatars": ["/images/dennis-didkovskiy.jpg","/images/elena-logacheva.jpg","PH"],
+    "calendar": {
+      "google": "http://www.google.com/calendar/event?action=TEMPLATE&text=Recital+Jingtong+Zhang+%2726+BM,+Harp&dates=20260310T200000/20260310T220000&location=Eben+Jordan+Hall,+Boston,+US&details=Free+professional+harp+recital+presented+by+NEC+students&trp=true"
+    },
+    "registerUrl": "https://necmusic.edu/events/recital-jingtong-zhang-26-bm-harp/",
+    "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
+    "presenter": "New England Conservatory",
+    "city": "Boston",
+    "source": "boster.org"
+  },
+  {
+  "id": "event03122618",
+  "title": "Thursday Gathering - March 12, 2026",
+  "description": "Join our weekly community gathering for networking, discussions, and workshops focused on technology and innovation at Venture Café, Cambridge.",
+  "image": "https://kendallsquare.org/wp-content/uploads/HomeHero.jpg",
+  "status": "",
+  "tags": ["Free","Community","In-Person"],
+  "location": "Venture Café, One Broadway, 5th floor, Cambridge, MA 02142",
+  "going": 3,
+  "avatars": ["/images/grigorii-menshikov.jpg","/images/dennis-didkovskiy.jpg","/images/elena-logacheva.jpg","PH"],
+  "calendar": {
+    "google": "https://www.google.com/calendar/event?action=TEMPLATE&text=Thursday+Gathering+-+March+12,+2026&dates=20260312T180000/20260312T200000&location=Venture+Café,+One+Broadway,+Cambridge,+MA,+US&details=Join+our+weekly+community+gathering+for+networking,+discussions,+and+workshops+focused+on+technology+and+innovation.&trp=true",
+    "ical": "https://community.venturecafecambridge.org/events/c4578cc6-c844-4432-8456-2142fa293839"
+  },
+  "registerUrl": "https://community.venturecafecambridge.org/events/c4578cc6-c844-4432-8456-2142fa293839",
+  "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
+  "presenter": "Venture Café",
+  "city": "Cambridge",
+  "source": "boster.org"
+}
+]

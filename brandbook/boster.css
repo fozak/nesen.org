@@ -1,0 +1,2350 @@
+/* =========================================================
+   BOSTER — Brandbook CSS
+   Bootstrap 5 override layer
+   Load AFTER bootstrap.min.css
+   ========================================================= */
+
+
+/* =========================================================
+   1. DESIGN TOKENS (SINGLE SOURCE OF TRUTH)
+   ========================================================= */
+
+:root {
+  /* --- Brand Blues --- */
+  --blue-100: #C8DFFA;   /* surfaces */
+  --blue-300: #82A0FA;   /* secondary */
+  --blue-700: #2446C8;   /* primary */
+
+  /* --- Accents --- */
+  --accent-coral: #FF6F61;
+  --accent-teal:  #4FD1C5;
+
+  /* --- Neutrals --- */
+  --neutral-0:   #ffffff;
+  --neutral-50:  #F5F7FA;
+  --neutral-900: #1E1E2F;
+
+  /* --- Typography --- */
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 18px;
+  --text-xl: 24px;
+  --text-2xl: 30px;
+  --text-3xl: 45px;
+  --text-4xl: 60px;
+
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+
+  /* --- Radii (shadcn-like) --- */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* --- Elevation --- */
+  --shadow-sm: 0 2px 6px rgba(36, 70, 200, 0.08);
+  --shadow-md: 0 6px 16px rgba(36, 70, 200, 0.10);
+
+  /* --- Gradients (STRUCTURAL ONLY) --- */
+  --gradient-primary:
+    linear-gradient(135deg, var(--blue-100), var(--blue-700));
+
+  --gradient-accent:
+    linear-gradient(135deg, var(--accent-teal), var(--accent-coral));
+
+    /* --- Additional Colors for products--- */
+
+     /* --- Brand Blues --- */
+  --blue-100: #C8DFFA;   /* surfaces */
+  --blue-300: #82A0FA;   /* secondary */
+  --blue-700: #2446C8;   /* primary */
+
+  /* --- Accents --- */
+  --accent-coral: #FF6F61;
+  --accent-teal:  #4FD1C5;
+
+  /* --- Neutrals --- */
+  --neutral-0:   #ffffff;
+  --neutral-50:  #F5F7FA;
+  --neutral-400: #9CA3AF;  /* NEW - mid gray */
+  --neutral-600: #4B5563;  /* NEW - darker gray */
+  --neutral-900: #1E1E2F;
+
+  /* Additional semantic colors for icon tiles */
+  --color-infrastructure: var(--neutral-600);
+  --color-utilities: var(--neutral-400);
+  --color-analytics: var(--accent-teal);
+  --color-communication: var(--accent-coral);
+  --color-core: var(--blue-700);
+  --color-secondary: var(--blue-300);
+
+  /* --- END OF PRODUCTS --- */
+}
+
+
+/* =========================================================
+   2. BOOTSTRAP SEMANTIC OVERRIDES
+   ========================================================= */
+
+:root {
+  --bs-primary:   var(--blue-700);
+  --bs-secondary: var(--blue-300);
+  --bs-info:      var(--accent-teal);
+  --bs-danger:    var(--accent-coral);
+  --bs-light:     var(--neutral-50);
+  --bs-dark:      var(--neutral-900);
+
+  --bs-body-bg:    var(--neutral-50);
+  --bs-body-color: var(--neutral-900);
+  --bs-border-color: rgba(36, 70, 200, 0.12);
+}
+
+
+/* =========================================================
+   3. BASE / RESET
+   ========================================================= */
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  background-color: var(--neutral-50);
+  color: var(--neutral-900);
+}
+
+::selection {
+  background: var(--blue-300);
+  color: var(--neutral-0);
+}
+
+
+/* =========================================================
+   4. TYPOGRAPHY
+   ========================================================= */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--blue-700);
+  line-height: var(--leading-tight);
+}
+
+h1 { font-size: var(--text-4xl); }
+h2 { font-size: var(--text-3xl); }
+h3 { font-size: var(--text-2xl); }
+h4 { font-size: var(--text-xl); }
+h5 { font-size: var(--text-lg); }
+h6 { font-size: var(--text-md); }
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--blue-700);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--blue-300);
+}
+
+
+/* =========================================================
+   5. BUTTONS (BOOTSTRAP-COMPATIBLE)
+   ========================================================= */
+
+.btn {
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  padding: 10px 20px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  border: none;
+}
+
+.btn-secondary {
+  background: var(--blue-300);
+  border: none;
+  color: var(--neutral-0);
+}
+
+.btn-accent {
+  background: var(--accent-coral);
+  border: none;
+  color: var(--neutral-0);
+}
+
+
+/* =========================================================
+   6. CARDS (SHADCN DISCIPLINE)
+   ========================================================= */
+
+.card {
+  background: var(--neutral-0);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(36, 70, 200, 0.1);
+  box-shadow: var(--shadow-md);
+}
+
+.card-header {
+  background: transparent;
+  border-bottom: 1px solid rgba(36, 70, 200, 0.08);
+  font-weight: 600;
+  color: var(--blue-700);
+}
+
+.card--highlight {
+  background: var(--blue-100);
+}
+
+
+/* =========================================================
+   7. FORMS
+   ========================================================= */
+
+.form-control,
+.form-select {
+  border-radius: var(--radius-sm);
+  border-color: rgba(36, 70, 200, 0.2);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--blue-700);
+  box-shadow: 0 0 0 0.2rem rgba(36, 70, 200, 0.15);
+}
+
+
+/* =========================================================
+   8. BADGES & LABELS
+   ========================================================= */
+
+.badge {
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+}
+
+.badge-primary {
+  background: var(--blue-700);
+}
+
+.badge-accent {
+  background: var(--accent-teal);
+  color: var(--neutral-900);
+}
+
+
+/* =========================================================
+   9. LAYOUT UTILITIES (MINIMAL)
+   ========================================================= */
+
+.section {
+  padding: 80px 0;
+}
+
+.section--hero {
+  background: var(--gradient-primary);
+  color: var(--neutral-0);
+}
+
+.section--hero h1,
+.section--hero h2 {
+  color: var(--neutral-0);
+}
+
+
+/* =========================================================
+   10. WHAT WE EXPLICITLY AVOID
+   - No rainbow alerts
+   - No decorative gradients
+   - No gray soup
+   ========================================================= */
+
+   /* =========================================================
+   11. EVENT COMPONENTS (BOOTSTRAP + BOSTER BRAND)
+   ========================================================= */
+/* =========================================================
+   11. EVENT COMPONENTS (BOOTSTRAP + BOSTER BRAND)
+   ========================================================= */
+
+/* --- Event Card with Hero Image --- */
+.event-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.event-card--featured {
+  border: 2px solid var(--blue-700);
+}
+
+/* Hero Image */
+.event-card__hero {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: var(--neutral-50);
+}
+
+.event-card__hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Status Badge Overlay */
+.event-card__status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.event-card__status--featured {
+  background: rgba(255, 111, 97, 0.95);
+  color: var(--neutral-0);
+}
+
+.event-card__status--filling {
+  background: rgba(79, 209, 197, 0.95);
+  color: var(--neutral-900);
+}
+
+.event-card__status--full {
+  background: rgba(130, 160, 250, 0.95);
+  color: var(--neutral-0);
+}
+
+/* Date Badge on Hero */
+.event-card__date {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: 60px;
+  height: 60px;
+  background: var(--blue-700);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-0);
+  box-shadow: 0 4px 12px rgba(36, 70, 200, 0.3);
+}
+
+.event-card__date-day {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.event-card__date-month {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+/* Card Body */
+.event-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+/* Content Area */
+.event-card__content {
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.event-card__title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--blue-700);
+  margin-bottom: 12px;
+  line-height: var(--leading-tight);
+}
+
+.event-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: var(--text-sm);
+  color: #6B7280;
+}
+
+.event-card__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.event-card__meta-item svg {
+  flex-shrink: 0;
+}
+
+.event-card__description {
+  font-size: var(--text-sm);
+  color: var(--neutral-900);
+  line-height: 1.5;
+}
+
+/* Footer (Fixed to bottom) */
+.event-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid rgba(36, 70, 200, 0.08);
+  margin-top: auto;
+}
+
+/* --- Stacked Avatars --- */
+.avatar-stack {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-stack .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--blue-300);
+  color: var(--neutral-0);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  border: 2px solid var(--neutral-0);
+  margin-left: -10px;
+}
+
+.avatar-stack .avatar:first-child {
+  margin-left: 0;
+}
+
+.avatar-stack .avatar-more {
+  background: var(--neutral-50);
+  color: var(--blue-700);
+}
+
+/* --- Past Events (Compact List) --- */
+.event-list .list-group-item {
+  transition: background 0.2s ease;
+}
+
+.event-list .list-group-item:hover {
+  background: var(--blue-100);
+}
+
+.event-list__date {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background: var(--blue-700);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-0);
+}
+
+.event-list__date-day {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.event-list__date-month {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+/* =========================================================
+   12. HERO & SEARCH COMPONENTS
+   ========================================================= */
+
+/* Hero Search Bar */
+.hero-search .search-bar {
+  background: var(--neutral-0);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-search .search-bar .form-control,
+.hero-search .search-bar .form-select {
+  border: 1px solid rgba(36, 70, 200, 0.15);
+  background: var(--neutral-50);
+}
+
+/* Quick Stats in Hero */
+.hero-search .text-white small {
+  opacity: 0.9;
+}
+
+
+/* =========================================================
+   13. EVENT DETAIL HEADER
+   ========================================================= */
+
+.event-detail-hero {
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+}
+
+.event-detail-hero .breadcrumb {
+  background: transparent;
+  padding: 0;
+}
+
+.event-detail-hero .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.event-detail-hero .breadcrumb-item a {
+  color: var(--neutral-0);
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.event-detail-hero .breadcrumb-item a:hover {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   14. TICKET CARDS & REGISTRATION
+   ========================================================= */
+
+.ticket-option {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.ticket-option:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.ticket-option.border-primary {
+  border-color: var(--blue-700) !important;
+  border-width: 2px;
+}
+
+/* Sticky Sidebar */
+.sticky-top {
+  position: sticky;
+  top: 20px;
+}
+
+
+/* =========================================================
+   15. FOOTER
+   ========================================================= */
+
+footer.bg-dark {
+  background: var(--neutral-900) !important;
+}
+
+footer.bg-dark h5,
+footer.bg-dark h6 {
+  color: var(--neutral-0);
+}
+
+footer.bg-dark .text-light {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+footer.bg-dark .text-muted {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+footer.bg-dark a.text-light:hover {
+  color: var(--blue-300) !important;
+}
+
+footer.bg-dark .border-secondary {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+/* =========================================================
+   16. TESTIMONIALS
+   ========================================================= */
+
+.testimonials .card {
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonials .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(36, 70, 200, 0.15);
+}
+
+.testimonials .avatar {
+  flex-shrink: 0;
+}
+
+.testimonials .text-warning {
+  color: #FFC107 !important;
+}
+
+
+/* =========================================================
+   17. COMMUNITY STATS
+   ========================================================= */
+
+.community-stats {
+  background: var(--neutral-50);
+}
+
+.community-stats .stat-item {
+  padding: 20px;
+}
+
+.community-stats .display-3 {
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+/* =========================================================
+   18. SPEAKER CARDS
+   ========================================================= */
+
+.speakers .card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.speakers .card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.speakers img {
+  border: 3px solid var(--blue-100);
+  transition: border-color 0.2s ease;
+}
+
+.speakers .card:hover img {
+  border-color: var(--blue-700);
+}
+
+.speakers .btn-outline-primary.rounded-circle {
+  transition: all 0.2s ease;
+}
+
+.speakers .btn-outline-primary.rounded-circle:hover {
+  background: var(--blue-700);
+  color: var(--neutral-0);
+  transform: scale(1.1);
+}
+
+
+/* =========================================================
+   19. CALENDAR VIEW
+   ========================================================= */
+
+.calendar-view table {
+  font-size: var(--text-sm);
+}
+
+.calendar-view th {
+  background: var(--blue-100);
+  color: var(--blue-700);
+  font-weight: 600;
+  padding: 12px 8px;
+  border: 1px solid rgba(36, 70, 200, 0.1);
+}
+
+.calendar-view td {
+  padding: 12px 8px;
+  vertical-align: top;
+  min-height: 80px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.calendar-view td:hover {
+  background: var(--blue-100);
+}
+
+.calendar-view .bg-primary.bg-opacity-10 {
+  background: rgba(36, 70, 200, 0.1) !important;
+  border: 2px solid var(--blue-700);
+  font-weight: 600;
+}
+
+.calendar-view .bg-primary.bg-opacity-10:hover {
+  background: rgba(36, 70, 200, 0.2) !important;
+}
+
+
+/* =========================================================
+   20. PAST EVENTS GALLERY
+   ========================================================= */
+
+.past-events .card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.past-events .card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.past-events .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.past-events .card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.past-events .badge-success {
+  background: #28a745 !important;
+}
+
+
+/* =========================================================
+   21. MEMBER NETWORKING / WHO'S ATTENDING
+   ========================================================= */
+
+.member-networking .card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(36, 70, 200, 0.1);
+}
+
+.member-networking .card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue-700);
+}
+
+.member-networking img {
+  border: 3px solid var(--blue-100);
+  object-fit: cover;
+}
+
+.member-networking .badge {
+  font-size: 11px;
+  padding: 4px 8px;
+}
+
+
+/* =========================================================
+   22. Q&A BOARD
+   ========================================================= */
+
+.qa-board textarea.form-control {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.qa-board .card {
+  transition: box-shadow 0.2s ease;
+}
+
+.qa-board .card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.qa-board .avatar {
+  flex-shrink: 0;
+}
+
+.qa-board .bg-light {
+  background: var(--neutral-50) !important;
+  border-left: 3px solid var(--accent-teal);
+}
+
+
+/* =========================================================
+   23. LIVE ACTIVITY FEED
+   ========================================================= */
+
+.activity-feed .card {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.activity-feed .avatar {
+  flex-shrink: 0;
+}
+
+.activity-feed .border-bottom:last-child {
+  border-bottom: none !important;
+}
+
+.activity-feed p strong {
+  color: var(--blue-700);
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   24. VIDEO HERO
+   ========================================================= */
+
+.video-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-hero video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.video-hero .btn-light {
+  background: var(--neutral-0);
+  color: var(--blue-700);
+  font-weight: 600;
+}
+
+.video-hero .btn-light:hover {
+  background: var(--blue-100);
+  transform: translateY(-2px);
+}
+
+.video-hero .btn-outline-light {
+  border: 2px solid var(--neutral-0);
+  color: var(--neutral-0);
+  font-weight: 600;
+}
+
+.video-hero .btn-outline-light:hover {
+  background: var(--neutral-0);
+  color: var(--blue-700);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   25. SHARED AVATAR STYLES
+   ========================================================= */
+
+.avatar,
+.avatar-large {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 50%;
+  background: var(--blue-300);
+  color: var(--neutral-0);
+}
+
+.avatar-large {
+  width: 80px;
+  height: 80px;
+  font-size: var(--text-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================================================
+   26. UTILITY CLASSES
+   ========================================================= */
+
+/* Background Utilities */
+.bg-light {
+  background: var(--neutral-50) !important;
+}
+
+/* Text Color Utilities */
+.text-primary {
+  color: var(--blue-700) !important;
+}
+
+.text-secondary {
+  color: var(--blue-300) !important;
+}
+
+/* Border Utilities */
+.border-primary {
+  border-color: var(--blue-700) !important;
+}
+
+
+/* =========================================================
+   27. RESPONSIVE ADJUSTMENTS
+   ========================================================= */
+
+@media (max-width: 768px) {
+  /* Event Cards */
+  .event-card__hero {
+    height: 160px;
+  }
+  
+  /* Hero Text */
+  h1.display-2,
+  h1.display-3,
+  h1.display-4 {
+    font-size: var(--text-3xl) !important;
+  }
+  
+  /* Stats */
+  .community-stats .display-3,
+  .community-stats .display-4 {
+    font-size: var(--text-2xl) !important;
+  }
+  
+  /* Calendar */
+  .calendar-view table {
+    font-size: 12px;
+  }
+  
+  .calendar-view td {
+    padding: 6px 4px;
+    min-height: 60px;
+  }
+  
+  /* Speaker Cards */
+  .speakers img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  /* Footer */
+  footer .col-6 {
+    margin-bottom: 2rem;
+  }
+  
+  /* Video Hero */
+  .video-hero {
+    height: 400px !important;
+  }
+  
+  /* Buttons in Hero */
+  .video-hero .btn-lg {
+    padding: 10px 20px;
+    font-size: var(--text-md);
+  }
+}
+
+@media (max-width: 576px) {
+  /* Section Padding */
+  .section {
+    padding: 40px 0;
+  }
+  
+  /* Event Cards */
+  .event-card__date {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .event-card__date-day {
+    font-size: 20px;
+  }
+  
+  .event-card__date-month {
+    font-size: 10px;
+  }
+  
+  /* Hero Search */
+  .hero-search .search-bar .row {
+    gap: 10px;
+  }
+  
+  .hero-search .search-bar .col-md-5,
+  .hero-search .search-bar .col-md-4,
+  .hero-search .search-bar .col-md-3 {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   28. PRINT STYLES
+   ========================================================= */
+
+@media print {
+  .video-hero,
+  .activity-feed,
+  .sticky-top,
+  footer {
+    display: none;
+  }
+  
+  .event-card {
+    page-break-inside: avoid;
+  }
+}
+
+
+/* =========================================================
+   29. ACCESSIBILITY ENHANCEMENTS
+   ========================================================= */
+
+/* Focus Styles */
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+  outline: 3px solid var(--blue-300);
+  outline-offset: 2px;
+}
+
+/* Skip to Content Link */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--blue-700);
+  color: var(--neutral-0);
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  z-index: 100;
+}
+
+.skip-to-content:focus {
+  top: 10px;
+  left: 10px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* =========================================================
+   30. DARK MODE PREPARATION (Optional)
+   ========================================================= */
+
+@media (prefers-color-scheme: dark) {
+  /* Uncomment when implementing dark mode */
+  /*
+  :root {
+    --neutral-0: #1E1E2F;
+    --neutral-50: #2A2A3C;
+    --neutral-900: #F5F7FA;
+  }
+  
+  body {
+    background-color: var(--neutral-0);
+    color: var(--neutral-900);
+  }
+  
+  .card {
+    background: var(--neutral-50);
+    border-color: rgba(200, 223, 250, 0.1);
+  }
+  */
+}
+
+/* =========================================================
+   31. NAVBAR OPTION 1: CLEAN WHITE STICKY
+   ========================================================= */
+
+.navbar-option-1 {
+  background: var(--neutral-0);
+  border-bottom: 1px solid var(--blue-100);
+  box-shadow: 0 2px 4px rgba(36, 70, 200, 0.04);
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar-option-1.scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+.navbar-option-1 .navbar-brand-text {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--blue-700);
+}
+
+.navbar-option-1 .nav-link {
+  color: var(--neutral-900);
+  font-weight: 500;
+  padding: 8px 16px;
+  margin: 0 4px;
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+}
+
+.navbar-option-1 .nav-link:hover {
+  color: var(--blue-700);
+  background: var(--blue-100);
+}
+
+.navbar-option-1 .nav-link.active {
+  color: var(--blue-700);
+  background: var(--blue-100);
+}
+
+.navbar-option-1 .btn-search {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--blue-300);
+  color: var(--blue-700);
+  background: transparent;
+  border-radius: var(--radius-md);
+}
+
+.navbar-option-1 .btn-search:hover {
+  background: var(--blue-100);
+  border-color: var(--blue-700);
+}
+
+
+/* =========================================================
+   32. NAVBAR OPTION 2: TRANSLUCENT BLUR
+   ========================================================= */
+
+.navbar-option-2 {
+  position: sticky;
+  top: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(36, 70, 200, 0.1);
+  box-shadow: 0 4px 24px rgba(36, 70, 200, 0.08);
+  margin: 10px auto;
+  max-width: 1200px;
+}
+
+.navbar-option-2 .container {
+  border-radius: var(--radius-lg);
+}
+
+.navbar-option-2 .navbar-brand-text {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar-option-2 .nav-link-blur {
+  position: relative;
+  color: var(--neutral-900);
+  font-weight: 500;
+  padding: 10px 16px;
+  transition: all 0.3s ease;
+}
+
+.navbar-option-2 .nav-link-blur:hover {
+  color: var(--blue-700);
+  transform: translateY(-2px);
+}
+
+.navbar-option-2 .nav-link-blur .nav-accent {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 3px;
+  background: var(--accent-coral);
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-option-2 .nav-link-blur.active .nav-accent,
+.navbar-option-2 .nav-link-blur:hover .nav-accent {
+  transform: translateX(-50%) scaleX(1);
+}
+
+@media (max-width: 991px) {
+  .navbar-option-2 {
+    margin: 0;
+    top: 0;
+    border-radius: 0;
+  }
+}
+
+
+/* =========================================================
+   33. HERO VARIANT 1: WHITE + IMAGE LEFT
+   ========================================================= */
+
+.hero-variant-1 {
+  background: var(--neutral-0);
+}
+
+.hero-variant-1 img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-variant-1 .badge {
+  font-size: var(--text-sm);
+  padding: 8px 16px;
+  border-radius: 50px;
+}
+
+.hero-variant-1 .display-3 {
+  color: var(--neutral-900);
+}
+
+.hero-variant-1 .trust-stat {
+  text-align: center;
+}
+
+.hero-variant-1 .trust-stat .h5 {
+  color: var(--blue-700);
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   34. HERO VARIANT 2: CENTERED WITH BACKGROUND
+   ========================================================= */
+
+.hero-variant-2 {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1600&h=800&fit=crop') center/cover;
+}
+
+.hero-variant-2__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(200, 223, 250, 0.9));
+}
+
+.hero-variant-2__content {
+  position: relative;
+  z-index: 1;
+  padding: 80px 0;
+}
+
+.hero-variant-2 .hero-badge {
+  background: var(--blue-700);
+  color: var(--neutral-0);
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: var(--text-sm);
+}
+
+.hero-variant-2 .display-2 {
+  color: var(--neutral-900);
+}
+
+.hero-variant-2 .lead {
+  color: var(--neutral-900);
+  opacity: 0.8;
+}
+
+.hero-variant-2 .hero-meta {
+  font-size: var(--text-md);
+}
+
+
+/* =========================================================
+   35. HERO VARIANT 3: SPLIT WITH GRADIENT ACCENT
+   ========================================================= */
+
+.hero-variant-3 {
+  background: var(--neutral-0);
+  padding: 80px 0;
+}
+
+.hero-variant-3__image-wrapper {
+  position: relative;
+}
+
+.hero-variant-3__gradient-blob {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 200px;
+  height: 200px;
+  background: var(--gradient-accent);
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.hero-variant-3__image {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(36, 70, 200, 0.15);
+}
+
+.hero-variant-3__stats-card {
+  position: absolute;
+  bottom: 20px;
+  right: -20px;
+  z-index: 2;
+  background: var(--neutral-0);
+  border: none;
+  box-shadow: 0 10px 40px rgba(36, 70, 200, 0.15);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hero-variant-3__stat-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--blue-100);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-700);
+  flex-shrink: 0;
+}
+
+.hero-variant-3__features li {
+  font-size: var(--text-md);
+  color: var(--neutral-900);
+}
+
+
+/* =========================================================
+   36. FOOTER OPTION 1: SOFT BLUE GRADIENT
+   ========================================================= */
+
+.footer-option-1 {
+  background: linear-gradient(180deg, var(--blue-100), var(--blue-300));
+  border-top: 1px solid rgba(36, 70, 200, 0.2);
+}
+
+.footer-option-1 h5,
+.footer-option-1 h6 {
+  color: var(--blue-700);
+}
+
+.footer-option-1 p {
+  color: var(--neutral-900);
+}
+
+.footer-option-1 .footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-option-1 .footer-links a {
+  color: var(--neutral-900);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  transition: color 0.2s ease;
+}
+
+.footer-option-1 .footer-links a:hover {
+  color: var(--blue-700);
+}
+
+.footer-option-1 .newsletter-signup .form-control {
+  background: var(--neutral-0);
+  border: 1px solid rgba(36, 70, 200, 0.2);
+  color: var(--neutral-900);
+}
+
+.footer-option-1 .newsletter-signup .form-control::placeholder {
+  color: rgba(30, 30, 47, 0.5);
+}
+
+.footer-option-1 .newsletter-signup .btn-primary {
+  padding: 0.375rem 1rem;
+}
+
+.footer-option-1 .social-icon {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue-700);
+  color: var(--neutral-0);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-option-1 .social-icon:hover {
+  background: var(--neutral-0);
+  color: var(--blue-700);
+  transform: translateY(-3px);
+}
+
+.footer-option-1 .footer-bottom {
+  border-top: 1px solid rgba(36, 70, 200, 0.2) !important;
+}
+
+.footer-option-1 .footer-bottom a {
+  color: var(--neutral-900);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-option-1 .footer-bottom a:hover {
+  color: var(--blue-700);
+}
+
+
+/* =========================================================
+   37. FOOTER OPTION 2: DARK BLUE PROFESSIONAL
+   ========================================================= */
+
+.footer-option-2 {
+  background: var(--blue-700);
+  color: var(--neutral-0);
+}
+
+.footer-option-2 .footer-heading {
+  color: var(--blue-300);
+  text-transform: uppercase;
+  font-size: var(--text-sm);
+  letter-spacing: 0.5px;
+}
+
+.footer-option-2 .footer-links-dark li {
+  margin-bottom: 10px;
+}
+
+.footer-option-2 .footer-links-dark a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  transition: color 0.2s ease;
+}
+
+.footer-option-2 .footer-links-dark a:hover {
+  color: var(--accent-teal);
+}
+
+.footer-option-2 .newsletter-signup-dark .form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--blue-300);
+  color: var(--neutral-0);
+}
+
+.footer-option-2 .newsletter-signup-dark .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-option-2 .newsletter-signup-dark .form-control:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--accent-teal);
+  color: var(--neutral-0);
+}
+
+.footer-option-2 .btn-accent {
+  background: var(--accent-teal);
+  border: none;
+  color: var(--neutral-900);
+  font-weight: 600;
+}
+
+.footer-option-2 .btn-accent:hover {
+  background: var(--accent-coral);
+  color: var(--neutral-0);
+}
+
+.footer-option-2 .footer-bottom-dark {
+  border-top: 1px solid rgba(130, 160, 250, 0.2);
+}
+
+.footer-option-2 .social-icon-dark {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--blue-300);
+  color: var(--blue-300);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-option-2 .social-icon-dark:hover {
+  background: var(--accent-teal);
+  border-color: var(--accent-teal);
+  color: var(--neutral-900);
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   38. RESPONSIVE ADJUSTMENTS FOR NEW COMPONENTS
+   ========================================================= */
+
+@media (max-width: 991px) {
+  /* Navbars */
+  .navbar-option-1 .navbar-collapse,
+  .navbar-option-2 .navbar-collapse {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--blue-100);
+  }
+  
+  /* Hero Variant 3 */
+  .hero-variant-3__stats-card {
+    position: static;
+    margin-top: 20px;
+  }
+  
+  .hero-variant-3__gradient-blob {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hero Variant 2 */
+  .hero-variant-2 {
+    min-height: 500px;
+  }
+  
+  .hero-variant-2 .display-2 {
+    font-size: var(--text-3xl) !important;
+  }
+  
+  /* Hero Variant 3 */
+  .hero-variant-3 {
+    padding: 40px 0;
+  }
+  
+  /* Footers */
+  .footer-option-1,
+  .footer-option-2 {
+    text-align: center;
+  }
+  
+  .footer-option-1 .social-icon,
+  .footer-option-2 .social-icon-dark {
+    margin: 0 8px;
+  }
+}
+
+
+/* =========================================================
+   39. UTILITY ANIMATIONS
+   ========================================================= */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* =========================================================
+   40. FOOTER OPTION 3: DARK GRADIENT (MAIN BLUE)
+   ========================================================= */
+
+.footer-option-3 {
+  background: linear-gradient(135deg, #1a3596 0%, var(--blue-700) 50%, #0d1f5c 100%);
+  color: var(--neutral-0);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle pattern overlay */
+.footer-option-3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(130, 160, 250, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(200, 223, 250, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.footer-option-3 .container {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-option-3 .footer-heading-gradient {
+  color: var(--blue-100);
+  text-transform: uppercase;
+  font-size: var(--text-sm);
+  letter-spacing: 0.5px;
+}
+
+.footer-option-3 .footer-links-gradient li {
+  margin-bottom: 10px;
+}
+
+.footer-option-3 .footer-links-gradient a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.footer-option-3 .footer-links-gradient a:hover {
+  color: var(--blue-100);
+  transform: translateX(4px);
+}
+
+.footer-option-3 .newsletter-signup-gradient .form-control {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(200, 223, 250, 0.3);
+  color: var(--neutral-0);
+  backdrop-filter: blur(10px);
+}
+
+.footer-option-3 .newsletter-signup-gradient .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-option-3 .newsletter-signup-gradient .form-control:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--blue-100);
+  color: var(--neutral-0);
+  box-shadow: 0 0 0 0.2rem rgba(200, 223, 250, 0.25);
+}
+
+.footer-option-3 .btn-light {
+  background: var(--neutral-0);
+  border: none;
+  color: var(--blue-700);
+  font-weight: 600;
+}
+
+.footer-option-3 .btn-light:hover {
+  background: var(--blue-100);
+  color: var(--blue-700);
+  transform: translateY(-1px);
+}
+
+.footer-option-3 .footer-bottom-gradient {
+  border-top: 1px solid rgba(200, 223, 250, 0.2);
+}
+
+.footer-option-3 .social-icon-gradient {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(200, 223, 250, 0.3);
+  color: var(--blue-100);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+}
+
+.footer-option-3 .social-icon-gradient:hover {
+  background: var(--neutral-0);
+  border-color: var(--neutral-0);
+  color: var(--blue-700);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .footer-option-3 {
+    text-align: center;
+  }
+  
+  .footer-option-3 .footer-links-gradient a:hover {
+    transform: translateX(0);
+  }
+}
+
+/* =========================================================
+   41. PARTNER COMPONENTS
+   ========================================================= */
+
+/* Partner Logos Grid (Simple) */
+.partner-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+  align-items: center;
+}
+
+.partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--neutral-0);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(36, 70, 200, 0.1);
+  transition: all 0.3s ease;
+  min-height: 100px;
+}
+
+.partner-logo:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue-300);
+}
+
+.partner-logo img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.partner-logo:hover img {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* Partner Tier Badges */
+.partner-tier-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.partner-tier-badge--platinum {
+  background: linear-gradient(135deg, #E5E4E2, #C0C0C0);
+  color: var(--neutral-900);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.partner-tier-badge--gold {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: var(--neutral-900);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.partner-tier-badge--silver {
+  background: linear-gradient(135deg, #C0C0C0, #A8A8A8);
+  color: var(--neutral-900);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Partner Cards */
+.partner-card {
+  position: relative;
+  background: var(--neutral-0);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(36, 70, 200, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.partner-card--platinum {
+  border: 2px solid #C0C0C0;
+}
+
+.partner-card--platinum:hover {
+  box-shadow: 0 8px 32px rgba(192, 192, 192, 0.3);
+}
+
+.partner-card--gold {
+  border: 2px solid #FFD700;
+}
+
+.partner-card--gold:hover {
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.2);
+}
+
+.partner-card__badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 2;
+  letter-spacing: 0.5px;
+}
+
+.partner-card--platinum .partner-card__badge {
+  background: linear-gradient(135deg, #E5E4E2, #C0C0C0);
+  color: var(--neutral-900);
+}
+
+.partner-card--gold .partner-card__badge {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: var(--neutral-900);
+}
+
+.partner-card__logo {
+  padding: 30px 20px;
+  background: var(--neutral-50);
+  border-bottom: 1px solid rgba(36, 70, 200, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+}
+
+.partner-card__logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.partner-card__content {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-card__name {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--blue-700);
+  margin-bottom: 8px;
+}
+
+.partner-card__industry {
+  font-size: var(--text-sm);
+  color: var(--blue-300);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.partner-card__description {
+  font-size: var(--text-sm);
+  color: var(--neutral-900);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.partner-card__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 16px 0;
+  margin-bottom: 20px;
+  border-top: 1px solid rgba(36, 70, 200, 0.08);
+  border-bottom: 1px solid rgba(36, 70, 200, 0.08);
+}
+
+.partner-card__stats .stat {
+  text-align: center;
+}
+
+.partner-card__stats .stat-value {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--blue-700);
+  line-height: 1;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.partner-card__stats .stat-label {
+  font-size: var(--text-xs);
+  color: var(--neutral-900);
+  opacity: 0.7;
+}
+
+.partner-card__actions {
+  margin-top: auto;
+}
+
+/* Partner Logos Simple (Silver Tier) */
+.partner-logos-simple {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.partner-logo-simple {
+  text-align: center;
+  padding: 20px;
+  background: var(--neutral-0);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(36, 70, 200, 0.08);
+  transition: all 0.2s ease;
+}
+
+.partner-logo-simple:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.partner-logo-simple img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+  opacity: 0.8;
+  filter: grayscale(50%);
+  transition: all 0.3s ease;
+}
+
+.partner-logo-simple:hover img {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.partner-logo-simple__name {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--blue-700);
+}
+
+/* Benefit Cards */
+.benefit-card {
+  padding: 32px 20px;
+  background: var(--neutral-0);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(36, 70, 200, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--blue-300);
+}
+
+.benefit-card__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  background: var(--blue-100);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-700);
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover .benefit-card__icon {
+  background: var(--blue-700);
+  color: var(--neutral-0);
+  transform: scale(1.1);
+}
+
+.benefit-card__title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--blue-700);
+  margin-bottom: 12px;
+}
+
+.benefit-card__description {
+  font-size: var(--text-sm);
+  color: var(--neutral-900);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Partners Page Header */
+.partners-page-header {
+  background: var(--gradient-primary);
+}
+
+/* Partnership CTA */
+.partner-cta {
+  background: var(--gradient-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .partner-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .partner-tier-badge {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .partner-tier-badge svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .partner-card__stats {
+    gap: 12px;
+  }
+  
+  .partner-logos-simple {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .partner-card__logo {
+    padding: 20px 16px;
+    min-height: 100px;
+  }
+  
+  .partner-card__content {
+    padding: 20px 16px;
+  }
+}
+
+/* =========================================================
+   42. ICON TILE UTILITIES (OPTION 2 EXPANDED PALETTE)
+   ========================================================= */
+
+.icon-tile {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-0);
+  flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.icon-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Core Features - Blue 700 */
+.icon-tile--core {
+  background: var(--blue-700);
+}
+
+/* Secondary Features - Blue 300 */
+.icon-tile--secondary {
+  background: var(--blue-300);
+}
+
+/* Analytics & Insights - Teal */
+.icon-tile--analytics {
+  background: var(--accent-teal);
+}
+
+/* Communication & Engagement - Coral */
+.icon-tile--communication {
+  background: var(--accent-coral);
+}
+
+/* Infrastructure & Technical - Gray 600 */
+.icon-tile--infrastructure {
+  background: var(--neutral-600);
+}
+
+/* Utilities & Tools - Gray 400 */
+.icon-tile--utilities {
+  background: var(--neutral-400);
+}
+
+/* Alternative naming (same colors, semantic names) */
+.icon-tile--primary { background: var(--blue-700); }
+.icon-tile--info { background: var(--blue-300); }
+.icon-tile--success { background: var(--accent-teal); }
+.icon-tile--warning { background: var(--accent-coral); }
+.icon-tile--dark { background: var(--neutral-600); }
+.icon-tile--muted { background: var(--neutral-400); }
+
+/* this is for more advaced icons */
+/* =========================================================
+   43. BENEFIT CARDS - EVENT CARD STYLE
+   ========================================================= */
+
+.benefit-card-new {
+  background: var(--neutral-0);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(36, 70, 200, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.benefit-card-new:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(36, 70, 200, 0.15);
+}
+
+/* Image Section */
+.benefit-card-new__image {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+}
+
+.benefit-card-new__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.benefit-card-new:hover .benefit-card-new__image img {
+  transform: scale(1.08);
+}
+
+.benefit-card-new__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(36, 70, 200, 0.1) 0%, rgba(36, 70, 200, 0.6) 100%);
+  opacity: 0.8;
+}
+
+/* Status Badges - Like Event Cards */
+.benefit-card-new__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-card-new__badge--featured {
+  background: rgba(255, 111, 97, 0.95);
+  color: white;
+}
+
+.benefit-card-new__badge--growth {
+  background: rgba(79, 209, 197, 0.95);
+  color: white;
+}
+
+.benefit-card-new__badge--premium {
+  background: rgba(245, 158, 11, 0.95);
+  color: white;
+}
+
+.benefit-card-new__badge--insights {
+  background: rgba(139, 92, 246, 0.95);
+  color: white;
+}
+
+/* Body Section */
+.benefit-card-new__body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.benefit-card-new__title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--blue-700);
+  margin-bottom: 12px;
+}
+
+.benefit-card-new__description {
+  font-size: var(--text-sm);
+  color: var(--neutral-900);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Benefit Highlights - Underlined Text */
+.benefit-card-new__highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.benefit-highlight {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--neutral-900);
+  position: relative;
+  padding-bottom: 6px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.benefit-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.benefit-highlight:hover {
+  transform: translateX(4px);
+}
+
+.benefit-highlight:hover::after {
+  height: 4px;
+}
+
+/* Color Variants - Underlines */
+.benefit-highlight--blue::after {
+  background: var(--blue-700);
+  box-shadow: 0 2px 8px rgba(36, 70, 200, 0.3);
+}
+
+.benefit-highlight--teal::after {
+  background: var(--accent-teal);
+  box-shadow: 0 2px 8px rgba(79, 209, 197, 0.3);
+}
+
+.benefit-highlight--coral::after {
+  background: var(--accent-coral);
+  box-shadow: 0 2px 8px rgba(255, 111, 97, 0.3);
+}
+
+.benefit-highlight--green::after {
+  background: var(--green);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.benefit-highlight--purple::after {
+  background: var(--purple);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+}
+
+.benefit-highlight--amber::after {
+  background: var(--amber);
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+/* Metric Display */
+.benefit-card-new__metric {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(36, 70, 200, 0.1);
+  text-align: center;
+}
+
+.benefit-card-new__metric .metric-value {
+  font-size: 28px;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.benefit-card-new__metric .metric-label {
+  font-size: 12px;
+  color: var(--neutral-900);
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .benefit-card-new__image {
+    height: 140px;
+  }
+  
+  .benefit-card-new__badge {
+    font-size: 10px;
+    padding: 5px 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .benefit-card-new__body {
+    padding: 20px;
+  }
+  
+  .benefit-highlight {
+    font-size: 13px;
+  }
+  
+  .benefit-card-new__metric .metric-value {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,48 @@
+; Domain: boster.com
+; Exported (y-m-d hh:mm:ss): 2026-03-02 15:21:17
+;
+; This file is intended for use for informational and archival
+; purposes ONLY and MUST be edited before use on a production
+; DNS server.
+;
+; In particular, you must update the SOA record with the correct
+; authoritative name server and contact e-mail address information,
+; and add the correct NS records for the name servers which will
+; be authoritative for this domain.
+;
+; For further information, please consult the BIND documentation
+; located on the following website:
+;
+; http://www.isc.org/
+;
+; And RFC 1035:
+;
+; http://www.ietf.org/rfc/rfc1035.txt
+;
+; Please note that we do NOT offer technical support for any use
+; of this zone data, the BIND name server, or any other third-
+; party DNS software.
+;
+; Use at your own risk.
+
+
+$ORIGIN boster.org.
+
+; A Record
+@	600	 IN 	A	185.199.109.153
+@	600	 IN 	A	185.199.110.153
+@	3600	 IN 	A	185.199.111.153
+community	600	 IN 	A	161.35.109.81
+
+
+; CNAME Record
+email	3600	 IN 	CNAME	mailgun.org.
+email.community	3600	 IN 	CNAME	mailgun.org.
+
+
+; MX Record
+@	3600	 IN 	MX	10	mxa.mailgun.org.
+@	3600	 IN 	MX	10	mxb.mailgun.org.
+community	3600	 IN 	MX	10	mxb.mailgun.org.
+community	3600	 IN 	MX	10	mxa.mailgun.org.
+
