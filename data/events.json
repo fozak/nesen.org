@@ -1,4 +1,34 @@
-[ 
+[ {
+  "id": "event02262618",
+  "title": "Thursday Gathering - February 26, 2026",
+  "description": "Join our weekly community gathering for networking, discussions, and workshops focused on technology and innovation at Venture Café, Cambridge.",
+  "image": "https://capitalprojects.mit.edu/sites/default/files/styles/project_full_540x348/public/MIT-Site5_2021AV67-072-WeissManfredi.jpg?itok=gtXOn0Ef",
+  "status": "",
+  "tags": ["Free", "Community", "In-Person"],
+  "location": "Venture Café, One Broadway, 5th floor, Cambridge, MA 02142",
+  "going": 12,
+  "attendees": 12,
+  "avatars": [
+    "/images/grigorii-menshikov.jpg",
+    "/images/dennis-didkovskiy.jpg",
+    "/images/elena-logacheva.jpg",
+    "PH"
+  ],
+  "photos": [],
+  "highlights": [],
+  "speakers": [],
+  "materials": {},
+  "communityUrl": "",
+  "calendar": {
+    "google": "https://www.google.com/calendar/event?action=TEMPLATE&text=Thursday+Gathering+-+March+5,+2026&dates=20260305T180000/20260305T200000&location=Venture+Café,+One+Broadway,+Cambridge,+MA,+US&details=Join+our+weekly+community+gathering+for+networking,+discussions,+and+workshops+focused+on+technology+and+innovation.&trp=true",
+    "ical": "https://community.venturecafecambridge.org/events/0d237eff-54e3-4559-ae43-3387acdcf45c"
+  },
+  "registerUrl": "https://community.venturecafecambridge.org/events/0d237eff-54e3-4559-ae43-3387acdcf45c",
+  "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
+  "presenter": "Venture Café",
+  "city": "Cambridge",
+  "source": "nesen.org"
+},
     {
   "id": "event03032619",
   "title": "Community at the concert. All of Scarlatti’s Sonatas",
@@ -51,7 +81,7 @@
     "status": "",
     "tags": ["Free","In-Person"],
     "location": "Eben Jordan Hall, Boston",
-    "going": 3,
+    "going": 8,
     "avatars": ["/images/dennis-didkovskiy.jpg","/images/elena-logacheva.jpg","PH"],
     "calendar": {
       "google": "http://www.google.com/calendar/event?action=TEMPLATE&text=Recital+Jingtong+Zhang+%2726+BM,+Harp&dates=20260310T200000/20260310T220000&location=Eben+Jordan+Hall,+Boston,+US&details=Free+professional+harp+recital+presented+by+NEC+students&trp=true"
@@ -80,6 +110,66 @@
   "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
   "presenter": "Venture Café",
   "city": "Cambridge",
+  "source": "nesen.org"
+},
+{
+  "id": "event03192618",
+  "title": "Thursday Gathering - March 19, 2026",
+  "description": "Join our weekly community gathering for networking, discussions, and workshops focused on technology and innovation at Venture Café, Cambridge.",
+  "image": "https://capitalprojects.mit.edu/sites/default/files/styles/project_full_540x348/public/MIT-Site5_2021AV67-072-WeissManfredi.jpg",
+  "status": "",
+  "tags": ["Free","Community","In-Person"],
+  "location": "Venture Café, One Broadway, 5th floor, Cambridge, MA 02142",
+  "going": 3,
+  "avatars": ["/images/grigorii-menshikov.jpg","/images/dennis-didkovskiy.jpg","/images/elena-logacheva.jpg","PH"],
+  "calendar": {
+    "google": "https://www.google.com/calendar/event?action=TEMPLATE&text=Thursday+Gathering+-+March+19,+2026&dates=20260319T180000/20260319T200000&location=Venture+Café,+One+Broadway,+Cambridge,+MA,+US&details=Join+our+weekly+community+gathering+for+networking,+discussions,+and+workshops+focused+on+technology+and+innovation.&trp=true",
+    "ical": "https://community.venturecafecambridge.org/events/c4578cc6-c844-4432-8456-2142fa293839"
+  },
+  "registerUrl": "https://community.venturecafecambridge.org/events/c4578cc6-c844-4432-8456-2142fa293839",
+  "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
+  "presenter": "Venture Café",
+  "city": "Cambridge",
+  "source": "nesen.org"
+},
+{
+  "id": "event04202609",
+  "title": "Community at Boston Marathon - April 20, 2026",
+  "description": "Join our community gathering during the Boston Marathon for networking, cheering runners, and connecting with innovators and professionals from the Boston tech and entrepreneurial ecosystem.",
+  "image": "https://wordpress.wbur.org/wp-content/uploads/2023/04/0418_Marathon-start13.jpg",
+  "status": "",
+  "tags": ["Community","Outdoor","In-Person"],
+  "location": "Boston Marathon, Boston, MA 02108",
+  "going": 26,
+  "avatars": ["/images/grigorii-menshikov.jpg","/images/dennis-didkovskiy.jpg","/images/elena-logacheva.jpg","PH"],
+  "calendar": {
+    "google": "https://www.google.com/calendar/event?action=TEMPLATE&text=Community+at+Boston+Marathon+-+April+20,+2026&dates=20260420T090000/20260420T120000&location=Boston+Marathon,+Boston,+MA,+US&details=Join+our+community+gathering+during+the+Boston+Marathon+for+networking,+cheering+runners,+and+connecting+with+innovators+and+professionals+from+the+Boston+tech+and+entrepreneurial+ecosystem.&trp=true",
+    "ical": "https://www.baa.org/races/boston-marathon"
+  },
+  "registerUrl": "https://www.baa.org/races/boston-marathon",
+  "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
+  "presenter": "Boston Marathon Community",
+  "city": "Boston",
+  "source": "nesen.org"
+},
+{
+  "id": "event08072620",
+  "title": "Community at Tanglewood - August 7, 2026",
+  "description": "Join our community gathering at Tanglewood for an evening of music, networking, and cultural exchange during the Boston Symphony Orchestra summer season.",
+  "image": "https://lakevillejournal.com/media-library/aerial-view-of-the-shed-at-tanglewood-in-lenox-mass.jpg?id=61137602&width=1200&height=800&quality=50&coordinates=0%2C65%2C0%2C65",
+  "status": "",
+  "tags": ["Community","Music","In-Person"],
+  "location": "Tanglewood, Lenox, MA 01240",
+  "going": 3,
+  "avatars": ["/images/grigorii-menshikov.jpg","/images/dennis-didkovskiy.jpg","/images/elena-logacheva.jpg","PH"],
+  "calendar": {
+    "google": "https://www.google.com/calendar/event?action=TEMPLATE&text=Community+at+Tanglewood+-+August+7,+2026&dates=20260807T200000/20260807T220000&location=Tanglewood,+Lenox,+MA,+US&details=Join+our+community+gathering+at+Tanglewood+for+an+evening+of+music,+networking,+and+cultural+exchange+during+the+Boston+Symphony+Orchestra+summer+season.&trp=true",
+    "ical": "https://www.bso.org/events/august-7-boston-symphony-orch?performance=2026-08-07-20:00"
+  },
+  "registerUrl": "https://www.bso.org/events/august-7-boston-symphony-orch?performance=2026-08-07-20:00",
+  "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
+  "presenter": "Tanglewood Community",
+  "city": "Lenox",
   "source": "nesen.org"
 }
 ]

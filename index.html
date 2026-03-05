@@ -8,36 +8,26 @@
 
   <!-- Primary Meta Tags -->
   <title>Tech Community Events | nesen</title>
-  <meta name="description"
-    content="Join our community events, workshops, and meetups focused on technology and innovation.">
+  <meta name="description" content="Join our community events, workshops, and meetups focused on technology and innovation.">
   <link rel="canonical" href="https://nesen.org">
   <meta name="robots" content="index, follow">
 
-  <!-- Structured Data (Article Schema) -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Upcoming Tech Events & Meetups",
-        "author": {
-            "@type": "Organization",
-            "name": "nesen"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "nesen",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://nesen.org/assets/images/logo/siteicon.png"
-            }
-        },
-        "datePublished": "2025-01-29",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://nesen.org/blog/events"
-        }
-    }
-    </script>
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Upcoming New England Entrepreneurship Events & Meetups",
+    "author": { "@type": "Organization", "name": "nesen" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "nesen",
+      "logo": { "@type": "ImageObject", "url": "https://nesen.org/assets/images/logo/siteicon.png" }
+    },
+    "datePublished": "2025-01-29",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://nesen.org/blog/events" }
+  }
+  </script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="https://nesen.org/brandbook/favicon.svg">
@@ -47,7 +37,7 @@
   <link href="/brandbook/nesen.css" rel="stylesheet">
   <link href="/brandbook/cards.css" rel="stylesheet">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TKN48R0YJX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -57,75 +47,93 @@
   </script>
 </head>
 
-
 <body>
-  <main id="main-content" class="container py-5">
-    <nav class="navbar navbar-option-1 navbar-expand-lg sticky-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-    <img src="\brandbook\logo.svg" alt="NESEN logo" height="36" width="36">
-    <span class="navbar-brand-text" style="font-size: 2rem;">NESEN</span>
-</a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+
+  <!-- ═══════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════ -->
+  <nav class="navbar navbar-option-1 navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="/brandbook/logo.svg" alt="NESEN logo" height="36" width="36">
+        <span class="navbar-brand-text" style="font-size:2rem;">NESEN</span>
+      </a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Community</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Calendar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Resources</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <button class="btn btn-sm btn-search">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
             </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Community</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Calendar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Resources</a>
-                    </li>
-                    <li class="nav-item ms-lg-3">
-                        <button class="btn btn-sm btn-search">
-                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-                            </svg>
-                        </button>
-                    </li>
-                    <li class="nav-item ms-lg-2">
-                        <button class="btn btn-primary btn-sm">Join</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-        <!-- Spacer for demo purposes -->
-    <div style="height: 10vh;"></div>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <button class="btn btn-primary btn-sm">Join</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════ -->
+  <main id="main-content" class="container py-5">
+
+    <!-- Upcoming Events -->
     <article>
       <section data-semantic="blog-section" class="mb-5">
         <h2 data-semantic="blog-subtitle" class="mb-4">Upcoming Events</h2>
+        <div id="events-container"></div>
       </section>
-      <div id="events-container"></div>
-
     </article>
 
+    <!-- Past Events -->
     <section class="past-events section py-5 bg-light">
       <div class="container">
         <div class="text-center mb-5">
           <h2>Recent Events</h2>
         </div>
+        <div id="past-events-container"></div>
       </div>
     </section>
+
   </main>
+
+
+  <!-- ═══════════════════════════════════
+       SCRIPTS
+  ═══════════════════════════════════ -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
   <script>
     // =====================================================
     // CONFIG
     // =====================================================
     const EVENTS_JSON_URL = "/data/events.json";
-    const MONTHS = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+    const MONTHS = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
 
     // =====================================================
-    // ESCAPE HTML (safety)
+    // ESCAPE HTML
     // =====================================================
     function esc(str) {
       return (str ?? "")
@@ -140,20 +148,19 @@
     function parseEventId(id) {
       const m = id?.match(/event(\d{2})(\d{2})(\d{2})(\d{2})/);
       if (!m) return null;
-
       const month = parseInt(m[1], 10) - 1;
-      const day = parseInt(m[2], 10);
-      const year = 2000 + parseInt(m[3], 10);
-      const hour = parseInt(m[4], 10);
-
-      const date = new Date(year, month, day, hour);
-
+      const day   = parseInt(m[2], 10);
+      const year  = 2000 + parseInt(m[3], 10);
+      const hour  = parseInt(m[4], 10);
+      const date  = new Date(year, month, day, hour);
       return {
         day,
+        month,
+        year,
         monthLabel: MONTHS[month],
-        weekday: date.toLocaleDateString("en-US", { weekday: "short" }),
-        timeLabel: `${hour.toString().padStart(2, "0")}:00`,
-        ts: date.getTime()
+        weekday:    date.toLocaleDateString("en-US", { weekday: "short" }),
+        timeLabel:  `${hour.toString().padStart(2, "0")}:00`,
+        ts:         date.getTime()
       };
     }
 
@@ -161,7 +168,7 @@
     // STATUS LABEL
     // =====================================================
     function statusLabel(status) {
-      if (status === "filling") return "Almost Full";
+      if (status === "filling")  return "Almost Full";
       if (status === "featured") return "Featured";
       return "";
     }
@@ -172,13 +179,13 @@
     function tagClass(tag) {
       if (tag === "Free") return "etag--free";
       if (tag === "Paid") return "etag--coral";
-      if (["Workshop", "Conference", "Meetup", "Concert"].includes(tag)) return "etag--blue";
-      if (["Online", "In-Person"].includes(tag)) return "etag--teal";
+      if (["Workshop","Conference","Meetup","Concert","Community"].includes(tag)) return "etag--blue";
+      if (["Online","In-Person"].includes(tag)) return "etag--teal";
       return "";
     }
 
     // =====================================================
-    // AVATAR SUPPORT (image path or initials)
+    // AVATAR HELPERS
     // =====================================================
     function isImagePath(value) {
       return /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(value);
@@ -186,62 +193,63 @@
 
     function getInitials(value) {
       if (!value) return "?";
-
       if (value.length <= 3 && !value.includes("/")) return value.toUpperCase();
-
-      const file = value.split("/").pop();
-      const name = file.split(".")[0];
-
+      const file  = value.split("/").pop();
+      const name  = file.split(".")[0];
       const parts = name.split(/[-_ ]+/);
-      const initials = parts
-        .filter(Boolean)
-        .map(p => p[0].toUpperCase())
-        .slice(0, 2)
-        .join("");
-
-      return initials || "?";
+      return parts.filter(Boolean).map(p => p[0].toUpperCase()).slice(0, 2).join("") || "?";
     }
 
     function avatarHtml(value) {
       if (!value) return "";
-
       if (isImagePath(value)) {
         const initials = getInitials(value);
-        return `
-      <span class="avatar">
-        <img src="${esc(value)}"
-             alt=""
-             loading="lazy"
-             onerror="this.remove(); this.parentNode.textContent='${initials}'">
-      </span>
-    `;
+        return `<span class="avatar">
+          <img src="${esc(value)}" alt="" loading="lazy"
+               onerror="this.remove();this.parentNode.textContent='${initials}'">
+        </span>`;
       }
-
       return `<span class="avatar">${getInitials(value)}</span>`;
     }
 
     // =====================================================
-    // RENDER SINGLE EVENT CARD
+    // RESOLVE PHOTOS — empty array → auto-generate from id
+    // =====================================================
+    function resolvePhotos(ev) {
+      if (ev.photos && ev.photos.length > 0) return ev.photos;
+      return [1, 2, 3].map(n => `events/${ev.id}-${n}.jpg`);
+    }
+
+    // =====================================================
+    // RESOLVE MATERIALS — missing keys → auto-generate
+    // =====================================================
+    function resolveMaterials(ev) {
+      const base = `events/${ev.id}`;
+      const m    = ev.materials || {};
+      return {
+        video:   m.video   ?? `${base}.mp4`,
+        slides:  m.slides  ?? `${base}.pdf`,
+        summary: m.summary ?? `${base}-summary.html`
+      };
+    }
+
+    // =====================================================
+    // RENDER UPCOMING EVENT CARD
     // =====================================================
     function renderEventCard(ev) {
       const d = parseEventId(ev.id);
       if (!d) return "";
 
       const statusHtml = ev.status
-        ? `<div class="event-card__status event-card__status--${ev.status}">
-         ${statusLabel(ev.status)}
-       </div>`
+        ? `<div class="event-card__status event-card__status--${ev.status}">${statusLabel(ev.status)}</div>`
         : "";
 
       const tagsHtml = (ev.tags || [])
         .map(t => `<span class="etag ${tagClass(t)}">${esc(t)}</span>`)
         .join("");
 
-      const avatarsHtml = (ev.avatars || [])
-        .map(avatarHtml)
-        .join("");
-
-      const moreCount = Math.max(0, (ev.going || 0) - (ev.avatars?.length || 0));
+      const avatarsHtml = (ev.avatars || []).map(avatarHtml).join("");
+      const moreCount   = Math.max(0, (ev.going || 0) - (ev.avatars?.length || 0));
 
       const calendarBtn = ev.calendar?.google
         ? `<a class="btn-ev-cal" href="${ev.calendar.google}" target="_blank" rel="noopener">Add to Calendar</a>`
@@ -255,7 +263,6 @@
         ? `<a class="btn-ev-connect" href="${ev.connectUrl}" target="_blank" rel="noopener">Connect</a>`
         : `<button class="btn-ev-connect">Connect</button>`;
 
-      // Title clickable (registerUrl)
       const titleHtml = ev.registerUrl
         ? `<a href="${ev.registerUrl}" target="_blank" rel="noopener">${esc(ev.title)}</a>`
         : esc(ev.title);
@@ -271,23 +278,17 @@
       <span class="event-card__date-month">${d.monthLabel}</span>
     </div>
   </div>
-
   <div class="evh__body">
     <div class="evh__title-row">
       <h3 class="evh__title">${titleHtml}</h3>
       <div class="evh__tags">${tagsHtml}</div>
     </div>
-
     <p class="evh__desc">${esc(ev.description)}</p>
-
     <div class="evh__meta">
-      <div class="evh__meta-item">
-        ${d.weekday}, ${d.monthLabel} ${d.day} · ${d.timeLabel}
-      </div>
+      <div class="evh__meta-item">${d.weekday}, ${d.monthLabel} ${d.day} · ${d.timeLabel}</div>
       <div class="evh__meta-item">${esc(ev.location)}</div>
       <div class="evh__meta-item">${ev.going || 0} going</div>
     </div>
-
     <div class="evh__footer">
       <div class="evh__btns">
         ${calendarBtn}
@@ -305,36 +306,181 @@
     }
 
     // =====================================================
-    // LOAD + RENDER EVENTS
+    // RENDER CAROUSEL for past card
+    // =====================================================
+    function renderCarousel(ev, index) {
+      const images = resolvePhotos(ev);
+      const id     = `carousel-past-${index}`;
+
+      if (images.length === 1) {
+        return `<div class="past-card__carousel past-card__carousel--single">
+          <img src="${esc(images[0])}" alt="${esc(ev.title)}" loading="lazy">
+        </div>`;
+      }
+
+      const indicators = images.map((_, i) => `
+        <button type="button"
+          data-bs-target="#${id}" data-bs-slide-to="${i}"
+          ${i === 0 ? 'class="active" aria-current="true"' : ''}
+          aria-label="Slide ${i + 1}">
+        </button>`).join("");
+
+      const slides = images.map((src, i) => `
+        <div class="carousel-item ${i === 0 ? "active" : ""}">
+          <img src="${esc(src)}" alt="${esc(ev.title)} photo ${i + 1}" loading="lazy">
+        </div>`).join("");
+
+      return `<div class="past-card__carousel">
+        <div id="${id}" class="carousel slide h-100" data-bs-ride="false">
+          <div class="carousel-indicators">${indicators}</div>
+          <div class="carousel-inner h-100">${slides}</div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#${id}" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#${id}" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>`;
+    }
+
+    // =====================================================
+    // RENDER SINGLE PAST CARD
+    // =====================================================
+    function renderPastCard(ev, index) {
+      const d = parseEventId(ev.id);
+      if (!d) return "";
+
+      const mat = resolveMaterials(ev);
+
+      const highlightsHtml = (ev.highlights || []).slice(0, 3)
+        .map(h => `<li>${esc(h)}</li>`)
+        .join("");
+
+      const speakersHtml = ev.speakers?.length
+        ? `<div class="past-card__speakers">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            ${ev.speakers.map(esc).join(" · ")}
+          </div>`
+        : "";
+
+      const matLinks = [
+        mat.video   ? `<a href="${esc(mat.video)}"   target="_blank" rel="noopener">Watch</a>`   : "",
+        mat.slides  ? `<a href="${esc(mat.slides)}"  target="_blank" rel="noopener">Slides</a>`  : "",
+        mat.summary ? `<a href="${esc(mat.summary)}" target="_blank" rel="noopener">Summary</a>` : ""
+      ].filter(Boolean);
+
+      const materialsHtml = matLinks.length
+        ? `<div class="past-card__section">
+            <div class="past-card__section-label">
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+              Materials
+            </div>
+            <div class="past-card__materials">
+              ${matLinks.join('<span class="past-card__dot">·</span>')}
+            </div>
+          </div>`
+        : "";
+
+      const connectHtml = (ev.communityUrl || ev.connectUrl)
+        ? `<div class="past-card__section">
+            <a href="${esc(ev.communityUrl || ev.connectUrl)}"
+               class="past-card__connect"
+               target="_blank" rel="noopener">
+              Join community →
+            </a>
+          </div>`
+        : "";
+
+      return `
+<div class="past-card">
+  ${renderCarousel(ev, index)}
+  <div class="past-card__body">
+    <div class="past-card__header">
+      <h3 class="past-card__title">${esc(ev.title)}</h3>
+      ${ev.attendees ? `<span class="past-card__attendees">${ev.attendees} attended</span>` : ""}
+    </div>
+    <div class="past-card__meta">
+      ${d.weekday}, ${d.monthLabel} ${d.day} ${d.year} · ${esc(ev.location)}
+    </div>
+    ${speakersHtml}
+    ${highlightsHtml ? `
+      <div class="past-card__section">
+        <div class="past-card__section-label">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          Highlights
+        </div>
+        <ul class="past-card__highlights">${highlightsHtml}</ul>
+      </div>` : ""}
+    ${materialsHtml}
+    ${connectHtml}
+  </div>
+</div>`;
+    }
+
+    // =====================================================
+    // RENDER PAST GRID — 2 cards per row
+    // =====================================================
+    function renderPastGrid(pastEvents) {
+      if (!pastEvents.length) return "";
+      const rows = [];
+      for (let i = 0; i < pastEvents.length; i += 2) {
+        const card1 = renderPastCard(pastEvents[i], i);
+        const card2 = pastEvents[i + 1] ? renderPastCard(pastEvents[i + 1], i + 1) : "";
+        rows.push(`<div class="past-grid__row">${card1}${card2}</div>`);
+      }
+      return rows.join("");
+    }
+
+    // =====================================================
+    // LOAD + RENDER
     // =====================================================
     async function loadEvents() {
       try {
-        const res = await fetch(EVENTS_JSON_URL);
+        const res    = await fetch(EVENTS_JSON_URL);
         const events = await res.json();
+        const now    = Date.now();
 
-        events.sort((a, b) => {
-          const da = parseEventId(a.id)?.ts || 0;
-          const db = parseEventId(b.id)?.ts || 0;
-          return da - db;
-        });
+        const upcoming = events.filter(ev => (parseEventId(ev.id)?.ts || 0) >= now);
+        const past     = events.filter(ev => (parseEventId(ev.id)?.ts || 0) <  now);
 
-        const html = events.map(renderEventCard).join("");
-        document.getElementById("events-container").innerHTML = html;
+        upcoming.sort((a, b) => (parseEventId(a.id)?.ts || 0) - (parseEventId(b.id)?.ts || 0));
+        past.sort(    (a, b) => (parseEventId(b.id)?.ts || 0) - (parseEventId(a.id)?.ts || 0));
+
+        const upcomingEl = document.getElementById("events-container");
+        if (upcomingEl) {
+          upcomingEl.innerHTML = upcoming.length
+            ? upcoming.map(renderEventCard).join("")
+            : `<div class="text-muted">No upcoming events.</div>`;
+        }
+
+        const pastEl = document.getElementById("past-events-container");
+        if (pastEl) {
+          pastEl.innerHTML = past.length
+            ? renderPastGrid(past)
+            : `<div class="text-muted">No past events yet.</div>`;
+        }
 
       } catch (err) {
         console.error("Events load error:", err);
-        document.getElementById("events-container").innerHTML =
-          `<div class="text-muted">Events unavailable</div>`;
+        const el = document.getElementById("events-container");
+        if (el) el.innerHTML = `<div class="text-muted">Events unavailable.</div>`;
       }
     }
 
     document.addEventListener("DOMContentLoaded", loadEvents);
   </script>
 
-
-  <!-- Scripts -->
   <script src="https://fozak.github.io/yoursa.org/assets/js/_loader.js" defer></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-</body>
 
+</body>
 </html>
