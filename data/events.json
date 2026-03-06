@@ -62,6 +62,7 @@
   "tags": ["Free","Community","In-Person"],
   "location": "Venture Café, One Broadway, 5th floor, Cambridge, MA 02142",
   "going": 12,
+  "attendees": 10,
   "avatars": ["/images/grigorii-menshikov.jpg","/images/dennis-didkovskiy.jpg","/images/elena-logacheva.jpg","PH"],
   "calendar": {
     "google": "https://www.google.com/calendar/event?action=TEMPLATE&text=Thursday+Gathering+-+March+5,+2026&dates=20260305T180000/20260305T200000&location=Venture+Café,+One+Broadway,+Cambridge,+MA,+US&details=Join+our+weekly+community+gathering+for+networking,+discussions,+and+workshops+focused+on+technology+and+innovation.&trp=true",
@@ -100,8 +101,8 @@
   "status": "",
   "tags": ["Free","Community","In-Person"],
   "location": "Venture Café, One Broadway, 5th floor, Cambridge, MA 02142",
-  "going": 3,
-  "avatars": ["/images/grigorii-menshikov.jpg","/images/dennis-didkovskiy.jpg","/images/elena-logacheva.jpg","PH"],
+  "going": 11,
+  "avatars": ["/images/madiyar-kumurbekov.jpg","/images/grigorii-menshikov.jpg","/images/dennis-didkovskiy.jpg","/images/elena-logacheva.jpg","PH"],
   "calendar": {
     "google": "https://www.google.com/calendar/event?action=TEMPLATE&text=Thursday+Gathering+-+March+12,+2026&dates=20260312T180000/20260312T200000&location=Venture+Café,+One+Broadway,+Cambridge,+MA,+US&details=Join+our+weekly+community+gathering+for+networking,+discussions,+and+workshops+focused+on+technology+and+innovation.&trp=true",
     "ical": "https://community.venturecafecambridge.org/events/c4578cc6-c844-4432-8456-2142fa293839"
@@ -120,10 +121,105 @@
   "status": "",
   "tags": ["Free","Community","In-Person"],
   "location": "Venture Café, One Broadway, 5th floor, Cambridge, MA 02142",
-  "going": 3,
+  "going": 15,
   "avatars": ["/images/grigorii-menshikov.jpg","/images/dennis-didkovskiy.jpg","/images/elena-logacheva.jpg","PH"],
   "calendar": {
     "google": "https://www.google.com/calendar/event?action=TEMPLATE&text=Thursday+Gathering+-+March+19,+2026&dates=20260319T180000/20260319T200000&location=Venture+Café,+One+Broadway,+Cambridge,+MA,+US&details=Join+our+weekly+community+gathering+for+networking,+discussions,+and+workshops+focused+on+technology+and+innovation.&trp=true",
+    "ical": "https://community.venturecafecambridge.org/events/c4578cc6-c844-4432-8456-2142fa293839"
+  },
+  "registerUrl": "https://community.venturecafecambridge.org/events/c4578cc6-c844-4432-8456-2142fa293839",
+  "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
+  "presenter": "Venture Café",
+  "city": "Cambridge",
+  "source": "nesen.org"
+},
+{
+  "id": "event03242620",
+  "title": "Community at the concert. Recital: Nikolaus Malinowski '26 MM, Jazz Guitar - March 24, 2026",
+  "description": "Join our community at a recital by Nikolaus Malinowski '26 MM featuring a jazz guitar performance at the New England Conservatory.",
+  "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=300&fit=crop",
+  "status": "",
+  "tags": ["Free", "Concert", "In-Person"],
+  "location": "Eben Jordan, Jordan Hall, New England Conservatory, Boston",
+  "going": 3,
+  "avatars": [
+    "/images/dennis-didkovskiy.jpg",
+    "/images/elena-logacheva.jpg",
+    "PH"
+  ],
+  "calendar": {
+    "google": "http://www.google.com/calendar/event?action=TEMPLATE&text=Recital:+Nikolaus+Malinowski+26+MM+Jazz+Guitar&dates=20260325T000000Z/20260325T013000Z&location=New+England+Conservatory,+Jordan+Hall,+Boston,+US&details=Recital+by+Nikolaus+Malinowski+26+MM+featuring+jazz+guitar+at+the+New+England+Conservatory.&trp=true",
+    "ical": "https://necmusic.edu/events/recital-nikolaus-malinowski-26-mm-jazz-guitar/"
+  },
+  "registerUrl": "https://necmusic.edu/events/recital-nikolaus-malinowski-26-mm-jazz-guitar/",
+  "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
+  "presenter": "New England Conservatory",
+  "city": "Boston",
+  "source": "nesen.org"
+},
+{
+  "id": "event03262618",
+  "title": "Thursday Gathering - March 26, 2026",
+  "description": "Join our weekly community gathering for networking, discussions, and workshops focused on technology and innovation at Venture Café, Cambridge.",
+  "image": "https://kendallsquare.org/wp-content/uploads/HomeHero.jpg",
+  "status": "",
+  "tags": ["Free","Community","In-Person"],
+  "location": "Venture Café, One Broadway, 5th floor, Cambridge, MA 02142",
+  "going": 8,
+  "avatars": ["/images/grigorii-menshikov.jpg","/images/dennis-didkovskiy.jpg","/images/elena-logacheva.jpg","PH"],
+  "calendar": {
+    "google": "https://www.google.com/calendar/event?action=TEMPLATE&text=Thursday+Gathering+-+March+26,+2026&dates=20260326T180000/20260326T200000&location=Venture+Café,+One+Broadway,+Cambridge,+MA,+US&details=Join+our+weekly+community+gathering+for+networking,+discussions,+and+workshops+focused+on+technology+and+innovation.&trp=true",
+    "ical": "https://community.venturecafecambridge.org/events/c4578cc6-c844-4432-8456-2142fa293839"
+  },
+  "registerUrl": "https://community.venturecafecambridge.org/events/c4578cc6-c844-4432-8456-2142fa293839",
+  "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
+  "presenter": "Venture Café",
+  "city": "Cambridge",
+  "source": "nesen.org"
+},
+{
+  "id": "event04022618",
+  "title": "Thursday Gathering - April 2, 2026",
+  "description": "Join our weekly community gathering for networking, discussions, and workshops focused on technology and innovation at Venture Café, Cambridge.",
+  "image": "https://media.thebostoncalendar.com/images/c_fit,w_300,q_auto,fl_lossy/v1678735428/uybexkqzaeixsofzhla1/venture-cafe-cambridge-thursday-gathering--11.jpg",
+  "status": "",
+  "tags": ["Free","Community","In-Person"],
+  "location": "Venture Café, One Broadway, 5th floor, Cambridge, MA 02142",
+  "going": 3,
+  "avatars": [
+    "/images/grigorii-menshikov.jpg",
+    "/images/dennis-didkovskiy.jpg",
+    "/images/elena-logacheva.jpg",
+    "PH"
+  ],
+  "calendar": {
+    "google": "https://www.google.com/calendar/event?action=TEMPLATE&text=Thursday+Gathering+-+April+2,+2026&dates=20260402T180000/20260402T200000&location=Venture+Café,+One+Broadway,+Cambridge,+MA,+US&details=Join+our+weekly+community+gathering+for+networking,+discussions,+and+workshops+focused+on+technology+and+innovation.&trp=true",
+    "ical": "https://community.venturecafecambridge.org/events/c4578cc6-c844-4432-8456-2142fa293839"
+  },
+  "registerUrl": "https://community.venturecafecambridge.org/events/c4578cc6-c844-4432-8456-2142fa293839",
+  "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
+  "presenter": "Venture Café",
+  "city": "Cambridge",
+  "source": "nesen.org"
+},
+{
+  "id": "event04092618",
+  "title": "Thursday Gathering - April 9, 2026",
+  "description": "Join our weekly community gathering for networking, discussions, and workshops focused on technology and innovation at Venture Café, Cambridge.",
+  "image": "https://kendallsquare.org/wp-content/uploads/HomeHero.jpg",
+  "status": "",
+  "tags": ["Free","Community","In-Person"],
+  "location": "Venture Café, One Broadway, 5th floor, Cambridge, MA 02142",
+  "going": 15,
+  "avatars": [
+    "/images/madiyar-kumurbekov.jpg",
+    "/images/grigorii-menshikov.jpg",
+    "/images/dennis-didkovskiy.jpg",
+    "/images/elena-logacheva.jpg",
+    "PH"
+  ],
+  "calendar": {
+    "google": "https://www.google.com/calendar/event?action=TEMPLATE&text=Thursday+Gathering+-+April+9,+2026&dates=20260409T180000/20260409T200000&location=Venture+Café,+One+Broadway,+Cambridge,+MA,+US&details=Join+our+weekly+community+gathering+for+networking,+discussions,+and+workshops+focused+on+technology+and+innovation.&trp=true",
     "ical": "https://community.venturecafecambridge.org/events/c4578cc6-c844-4432-8456-2142fa293839"
   },
   "registerUrl": "https://community.venturecafecambridge.org/events/c4578cc6-c844-4432-8456-2142fa293839",
