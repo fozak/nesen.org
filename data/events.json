@@ -229,6 +229,31 @@
   "source": "nesen.org"
 },
 {
+  "id": "event04162618",
+  "title": "Thursday Gathering - April 16, 2026",
+  "description": "Join our weekly community gathering for networking, discussions, and workshops focused on technology and innovation at Venture Café, Cambridge.",
+  "image": "https://media.thebostoncalendar.com/images/c_fit,w_300,q_auto,fl_lossy/v1678735428/uybexkqzaeixsofzhla1/venture-cafe-cambridge-thursday-gathering--11.jpg",
+  "status": "",
+  "tags": ["Free","Community","In-Person"],
+  "location": "Venture Café, One Broadway, 5th floor, Cambridge, MA 02142",
+  "going": 3,
+  "avatars": [
+    "/images/grigorii-menshikov.jpg",
+    "/images/dennis-didkovskiy.jpg",
+    "/images/elena-logacheva.jpg",
+    "PH"
+  ],
+  "calendar": {
+    "google": "https://www.google.com/calendar/event?action=TEMPLATE&text=Thursday+Gathering+-+April+16,+2026&dates=20260416T180000/20260416T200000&location=Venture+Café,+One+Broadway,+Cambridge,+MA,+US&details=Join+our+weekly+community+gathering+for+networking,+discussions,+and+workshops+focused+on+technology+and+innovation.&trp=true",
+    "ical": "https://community.venturecafecambridge.org/events/c4578cc6-c844-4432-8456-2142fa293839"
+  },
+  "registerUrl": "https://community.venturecafecambridge.org/events/c4578cc6-c844-4432-8456-2142fa293839",
+  "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
+  "presenter": "Venture Café",
+  "city": "Cambridge",
+  "source": "nesen.org"
+},
+{
   "id": "event04202609",
   "title": "Community at Boston Marathon - April 20, 2026",
   "description": "Join our community gathering during the Boston Marathon for networking, cheering runners, and connecting with innovators and professionals from the Boston tech and entrepreneurial ecosystem.",
