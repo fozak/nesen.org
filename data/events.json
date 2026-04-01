@@ -134,30 +134,6 @@
   "source": "nesen.org"
 },
 {
-  "id": "event03242620",
-  "title": "Community at the concert. Recital: Nikolaus Malinowski '26 MM, Jazz Guitar - March 24, 2026",
-  "description": "Join our community at a recital by Nikolaus Malinowski '26 MM featuring a jazz guitar performance at the New England Conservatory.",
-  "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=300&fit=crop",
-  "status": "",
-  "tags": ["Free", "Concert", "In-Person"],
-  "location": "Eben Jordan, Jordan Hall, New England Conservatory, Boston",
-  "going": 3,
-  "avatars": [
-    "/images/dennis-didkovskiy.jpg",
-    "/images/elena-logacheva.jpg",
-    "PH"
-  ],
-  "calendar": {
-    "google": "http://www.google.com/calendar/event?action=TEMPLATE&text=Recital:+Nikolaus+Malinowski+26+MM+Jazz+Guitar&dates=20260325T000000Z/20260325T013000Z&location=New+England+Conservatory,+Jordan+Hall,+Boston,+US&details=Recital+by+Nikolaus+Malinowski+26+MM+featuring+jazz+guitar+at+the+New+England+Conservatory.&trp=true",
-    "ical": "https://necmusic.edu/events/recital-nikolaus-malinowski-26-mm-jazz-guitar/"
-  },
-  "registerUrl": "https://necmusic.edu/events/recital-nikolaus-malinowski-26-mm-jazz-guitar/",
-  "connectUrl": "https://www.linkedin.com/in/dennis-didkovski/",
-  "presenter": "New England Conservatory",
-  "city": "Boston",
-  "source": "nesen.org"
-},
-{
   "id": "event03262618",
   "title": "Thursday Gathering - March 26, 2026",
   "description": "Join our weekly community gathering for networking, discussions, and workshops focused on technology and innovation at Venture Café, Cambridge.",
