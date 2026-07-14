@@ -1,0 +1,49 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Outer Blue Circle -->
+  <circle cx="400" cy="400" r="380" fill="#123C7A"></circle>
+
+  <!-- Inner White Ring -->
+  <circle cx="400" cy="400" r="340" fill="none" stroke="white" stroke-width="12"></circle>
+
+  <!-- Star definition (20% larger) -->
+  <defs>
+    <polygon id="star" points="
+        0,-42
+        12,-12
+        42,-12
+        18,6
+        26,36
+        0,18
+        -26,36
+        -18,6
+        -42,-12
+        -12,-12"></polygon>
+  </defs>
+
+  <!-- Stars placed with true circular symmetry -->
+  <g fill="white" transform="translate(400,400)">
+
+    <!-- Radius -->
+    <!-- 255 keeps stars visually centered between tree and ring -->
+
+    <g transform="rotate(45) translate(0,-255)"><use href="#star"></use></g>
+    <g transform="rotate(90) translate(0,-255)"><use href="#star"></use></g>
+    <g transform="rotate(135) translate(0,-255)"><use href="#star"></use></g>
+    <g transform="rotate(180) translate(0,-255)"><use href="#star"></use></g>
+    <g transform="rotate(225) translate(0,-255)"><use href="#star"></use></g>
+    <g transform="rotate(270) translate(0,-255)"><use href="#star"></use></g>
+    <g transform="rotate(315) translate(0,-255)"><use href="#star"></use></g>
+
+  </g>
+
+  <!-- Pine Tree (shifted up 10% = 80px) -->
+  <g fill="#2E7D32" transform="translate(0,-80)">
+    <polygon points="400,210 330,320 470,320"></polygon>
+    <polygon points="400,270 300,420 500,420"></polygon>
+    <polygon points="400,350 260,540 540,540"></polygon>
+    <rect x="380" y="540" width="40" height="90"></rect>
+  </g>
+
+</svg>
