@@ -1,0 +1,503 @@
+/* ═══════════════════════════════════════════════════════════
+   nesen.css — Tabler override + NESEN custom components
+   Palette source: #123C7A (navy) · #2E7D32 (forest green) · #D4541A (coral)
+   Load order: after all tabler CDN links, before </head>
+   ═══════════════════════════════════════════════════════════ */
+
+
+/* ── 1. DESIGN TOKENS ── */
+
+:root {
+
+  /* Blue / Primary — from logo navy #123C7A */
+  --nesen-blue-50:          #E8EFF8;
+  --nesen-blue-100:         #C0D1EC;
+  --nesen-blue-300:         #7AA3D4;
+  --nesen-blue-500:         #2B6CB8;   /* primary default */
+  --nesen-blue-700:         #123C7A;   /* logo exact / navbar / hover */
+  --nesen-blue-900:         #0A2550;
+
+  /* Green / Success — from logo pine #2E7D32 */
+  --nesen-green-50:         #E8F5E9;
+  --nesen-green-200:        #A5D6A7;
+  --nesen-green-400:        #4CAF50;
+  --nesen-green-700:        #2E7D32;   /* logo exact */
+  --nesen-green-900:        #1B5E20;
+
+  /* Coral / Accent — warm third hue */
+  --nesen-coral-50:         #FDF0EB;
+  --nesen-coral-200:        #F4BDA8;
+  --nesen-coral-500:        #D4541A;   /* primary coral */
+  --nesen-coral-700:        #A83E10;
+  --accent-coral:           #D4541A;   /* shorthand used in .btn-ev-cal etc */
+
+  /* Neutrals — blue-grey cast */
+  --nesen-body-bg:          #F4F6FA;
+  --nesen-border:           #E2E8F3;
+  --nesen-muted:            #6B7B99;
+  --nesen-body-color:       #1C2B4A;
+
+  /* Radius */
+  --radius-md:              8px;
+  --radius-lg:              12px;
+
+  /* ── Tabler overrides ── */
+  --tblr-primary:           #2B6CB8;
+  --tblr-primary-rgb:       43, 108, 184;
+  --tblr-primary-lt:        #E8EFF8;
+  --tblr-primary-lt-hover:  #C0D1EC;
+  --tblr-primary-dark:      #123C7A;
+  --tblr-primary-fg:        #ffffff;
+
+  --tblr-blue:              #2B6CB8;
+  --tblr-blue-lt:           #E8EFF8;
+  --tblr-blue-lt-hover:     #C0D1EC;
+  --tblr-blue-dark:         #123C7A;
+  --tblr-blue-darker:       #0A2550;
+
+  --tblr-success:           #2E7D32;
+  --tblr-success-rgb:       46, 125, 50;
+  --tblr-success-lt:        #E8F5E9;
+  --tblr-success-fg:        #ffffff;
+  --tblr-green:             #2E7D32;
+  --tblr-green-lt:          #E8F5E9;
+  --tblr-green-dark:        #1B5E20;
+
+  --tblr-body-color:        #1C2B4A;
+  --tblr-muted:             #6B7B99;
+  --tblr-body-bg:           #F4F6FA;
+  --tblr-border-color:      #E2E8F3;
+
+  --tblr-link-color:        #2B6CB8;
+  --tblr-link-hover-color:  #123C7A;
+}
+
+
+/* ── 2. GLOBAL ── */
+
+html { overflow-x: hidden; }
+
+body {
+  color: var(--nesen-body-color);
+  background-color: var(--nesen-body-bg);
+}
+
+.body-gradient {
+  background: linear-gradient(160deg, #E8EFF8 0%, #F4F6FA 55%, #E8F5E9 100%);
+}
+
+
+/* ── 3. NAVBAR ── */
+
+.navbar-brand-text {
+  font-family: 'Inter var', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  font-feature-settings: "cv01" 1;
+}
+
+.navbar-dark,
+.navbar[data-bs-theme="dark"] {
+  --tblr-navbar-bg:     #123C7A;
+  --tblr-navbar-color:  #ffffff;
+  --tblr-navbar-border: transparent;
+  background-color:     #123C7A;
+}
+
+
+/* ── 4. BUTTONS ── */
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #123C7A;
+  border-color:     #123C7A;
+}
+
+/* Coral outline button — event calendar and secondary CTAs */
+.btn-ev-cal {
+  display:         inline-flex !important;
+  align-items:     center;
+  gap:             6px;
+  padding:         9px 18px !important;
+  border-radius:   var(--radius-md) !important;
+  font-size:       14px !important;
+  font-weight:     600 !important;
+  border:          1.5px solid var(--accent-coral) !important;
+  color:           var(--accent-coral) !important;
+  background:      transparent !important;
+  cursor:          pointer;
+  line-height:     1;
+  transition:      background .15s, color .15s, transform .15s !important;
+}
+.btn-ev-cal:hover {
+  background: var(--accent-coral) !important;
+  color:      #ffffff !important;
+  transform:  translateY(-1px);
+}
+.btn-ev-cal:active {
+  transform: translateY(0);
+}
+
+
+/* ── 5. BADGES + TAGS ── */
+
+.badge.bg-success,
+.tag.tag-success {
+  background-color: #2E7D32 !important;
+  color: #ffffff;
+}
+
+/* Classification slot badge — exclusive seat indicator */
+.badge-classification {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             5px;
+  font-size:       0.7rem;
+  font-weight:     700;
+  letter-spacing:  .04em;
+  text-transform:  uppercase;
+  padding:         3px 10px;
+  border-radius:   100px;
+  white-space:     nowrap;
+}
+.badge-classification--taken {
+  background: rgba(18, 60, 122, 0.1);
+  color:      #123C7A;
+  border:     1px solid rgba(18, 60, 122, 0.2);
+}
+.badge-classification--open {
+  background: rgba(46, 125, 50, 0.1);
+  color:      #2E7D32;
+  border:     1px solid rgba(46, 125, 50, 0.25);
+}
+.badge-classification--pending {
+  background: rgba(212, 84, 26, 0.1);
+  color:      #D4541A;
+  border:     1px solid rgba(212, 84, 26, 0.2);
+}
+
+
+/* ── 6. SIDEBAR ── */
+
+.sidebar-sticky {
+  position:   sticky;
+  top:        1rem;
+  align-self: flex-start;
+}
+
+
+/* ── 7. AVATARS ── */
+
+.avatar-list .avatar {
+  border-radius: 50% !important;
+  overflow:      hidden !important;
+}
+
+
+/* ── 8. HERO COMPONENTS ── */
+
+/* Feature list — left-border accent */
+.feature-list { list-style: none; padding: 0; margin: 0 0 28px; }
+.feature-list li {
+  padding:       8px 0 8px 16px;
+  border-left:   3px solid var(--tblr-primary);
+  margin-bottom: 12px;
+  line-height:   1.5;
+}
+.feature-list li:last-child { margin-bottom: 0; }
+
+/* Collage images */
+.collage-main {
+  height:           420px;
+  object-fit:       cover;
+  object-position:  center;
+  border-radius:    12px;
+  width:            100%;
+  display:          block;
+}
+.collage-small {
+  height:           132px;
+  object-fit:       cover;
+  object-position:  center;
+  border-radius:    10px;
+  width:            100%;
+  display:          block;
+}
+
+/* Stats card overlay */
+.stats-card {
+  position:    absolute;
+  bottom:      -22px;
+  left:        20px;
+  z-index:     2;
+  border-left: 4px solid var(--tblr-primary);
+  white-space: nowrap;
+}
+.stat-val   { font-size: 16px; font-weight: 700; color: var(--tblr-primary); line-height: 1.2; }
+.stat-label { font-size: 11px; color: var(--tblr-muted); line-height: 1.3; }
+
+/* Step numbers */
+.step-number {
+  font-size:   72px;
+  font-weight: 900;
+  line-height: 1;
+  color:       var(--tblr-primary);
+  opacity:     0.18;
+  user-select: none;
+  flex-shrink: 0;
+  width:       64px;
+}
+
+
+/* ── 9. NESEN-SPECIFIC COMPONENTS ── */
+
+/* Meeting info ribbon */
+.meeting-ribbon {
+  display:          flex;
+  align-items:      center;
+  gap:              20px;
+  flex-wrap:        wrap;
+  padding:          10px 20px;
+  background:       rgba(18, 60, 122, 0.06);
+  border:           1px solid rgba(18, 60, 122, 0.12);
+  border-radius:    var(--radius-md);
+  font-size:        0.8125rem;
+  font-weight:      600;
+  color:            #123C7A;
+}
+.meeting-ribbon .ti { font-size: 1rem; opacity: .7; }
+
+/* Classification card — seat map grid item */
+.classification-card {
+  border:        1px solid var(--nesen-border);
+  border-radius: var(--radius-lg);
+  padding:       16px;
+  transition:    box-shadow .15s, border-color .15s;
+  background:    #fff;
+}
+.classification-card--taken {
+  border-left: 4px solid #123C7A;
+}
+.classification-card--open {
+  border-left:  4px solid #2E7D32;
+  cursor:       pointer;
+}
+.classification-card--open:hover {
+  border-color:  #2E7D32;
+  box-shadow:    0 4px 16px rgba(46, 125, 50, 0.12);
+}
+.classification-card--pending {
+  border-left: 4px solid #D4541A;
+}
+.classification-name {
+  font-size:   0.8125rem;
+  font-weight: 700;
+  color:       var(--nesen-body-color);
+  margin:      0 0 4px;
+}
+.classification-member {
+  font-size: 0.75rem;
+  color:     var(--nesen-muted);
+}
+
+/* Referral pass card — printable */
+.referral-card {
+  border:        1px solid var(--nesen-border);
+  border-left:   4px solid var(--tblr-primary);
+  border-radius: var(--radius-md);
+  padding:       14px 16px;
+  background:    #fff;
+  break-inside:  avoid;
+}
+.referral-card-label {
+  font-size:      0.6rem;
+  font-weight:    700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color:          var(--nesen-muted);
+  margin-bottom:  4px;
+}
+.referral-card-name {
+  font-size:   1rem;
+  font-weight: 700;
+  color:       #123C7A;
+}
+.referral-card-context {
+  font-size:   0.8125rem;
+  color:       var(--nesen-body-color);
+  margin-top:  6px;
+  line-height: 1.5;
+}
+
+/* Audience tab switcher */
+.audience-tabs {
+  display:       flex;
+  gap:           6px;
+  flex-wrap:     wrap;
+  margin-bottom: 24px;
+}
+.audience-tab {
+  padding:       6px 16px;
+  border-radius: 100px;
+  font-size:     0.8125rem;
+  font-weight:   600;
+  border:        1.5px solid var(--nesen-border);
+  background:    transparent;
+  color:         var(--nesen-muted);
+  cursor:        pointer;
+  transition:    all .15s;
+  white-space:   nowrap;
+}
+.audience-tab.active,
+.audience-tab:hover {
+  border-color: #2B6CB8;
+  color:        #2B6CB8;
+  background:   #E8EFF8;
+}
+.audience-tab.active {
+  background: #2B6CB8;
+  color:      #fff;
+}
+
+
+/* ── 10. EVH EVENT CARD (from Exponanta) ── */
+
+.evh-img { width: 180px; flex: 0 0 180px; position: relative; overflow: hidden; }
+.evh-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.evh-date {
+  position:     absolute;
+  top:          10px;
+  left:         10px;
+  background:   rgba(18, 60, 122, 0.92);   /* NESEN navy, was Exponanta blue */
+  color:        #fff;
+  text-align:   center;
+  padding:      4px 8px;
+  border-radius: 6px;
+  line-height:  1.2;
+  min-width:    44px;
+}
+.evh-date-day { display: block; font-size: 1.25rem; font-weight: 700; }
+.evh-date-mon { display: block; font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; }
+
+
+/* ── 11. TAG DOT + FILTER BAR ── */
+
+.tag-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+.filter-group-label { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--tblr-muted); align-self: center; white-space: nowrap; }
+.filter-divider { width: 1px; height: 20px; background: var(--tblr-border-color); align-self: center; }
+
+.view-toggle { display: inline-flex; border: 1px solid var(--tblr-border-color); border-radius: var(--tblr-border-radius); overflow: hidden; }
+.view-toggle-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; font-size: .8125rem; font-weight: 500; border: none; background: transparent; color: var(--tblr-muted); cursor: pointer; transition: all .15s; border-right: 1px solid var(--tblr-border-color); }
+.view-toggle-btn:last-child { border-right: none; }
+.view-toggle-btn.active { background: var(--tblr-primary); color: #fff; }
+.view-toggle-btn:not(.active):hover { background: var(--tblr-light); }
+
+
+/* ── 12. CALENDAR (from Exponanta, NESEN event taxonomy) ── */
+
+.cal-grid-wrap { border: 1px solid var(--tblr-border-color); border-radius: var(--tblr-border-radius); overflow: hidden; background: #fff; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); grid-template-rows: auto; }
+.cal-dow-row { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; background: var(--tblr-light); border-bottom: 2px solid var(--tblr-border-color); }
+@supports not (grid-template-columns: subgrid) {
+  .cal-dow-row { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+}
+.cal-dow { padding: 8px 0; text-align: center; font-size: .6875rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--tblr-muted); border-right: 1px solid var(--tblr-border-color); overflow: hidden; }
+.cal-dow:last-child { border-right: none; }
+.cal-body-grid { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; }
+@supports not (grid-template-columns: subgrid) {
+  .cal-body-grid { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+}
+.cal-cell { height: 110px; border-right: 1px solid var(--tblr-border-color); border-bottom: 1px solid var(--tblr-border-color); padding: 6px 5px 4px; box-sizing: border-box; background: #fff; overflow: hidden; min-width: 0; }
+.cal-cell:nth-child(7n) { border-right: none; }
+.cal-cell--other { background: var(--tblr-light); }
+.cal-cell--today { background: rgba(43, 108, 184, .04); }
+.cal-day-num { font-size: .75rem; font-weight: 600; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 3px; color: var(--tblr-body-color); flex-shrink: 0; }
+.cal-cell--today .cal-day-num { background: var(--tblr-primary); color: #fff; }
+.cal-cell--other .cal-day-num { color: var(--tblr-muted); opacity: .5; }
+.cal-pill { display: block; width: 100%; padding: 1px 5px; border-radius: 3px; font-size: .6875rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 2px; cursor: pointer; border: none; text-align: left; line-height: 1.6; transition: opacity .12s; }
+.cal-pill:hover { opacity: .75; }
+
+/* NESEN event taxonomy — replaces Exponanta's Community/Concert/Workshop */
+.cal-pill--Referral-Meeting { background: rgba(43, 108, 184, .12);  color: #2B6CB8; }
+.cal-pill--Pitch-Night      { background: rgba(212, 84, 26, .12);   color: #D4541A; }
+.cal-pill--One-to-One       { background: rgba(46, 125, 50, .12);   color: #2E7D32; }
+.cal-pill--Guest-Visit      { background: rgba(18, 60, 122, .08);   color: #123C7A; }
+.cal-pill--default          { background: var(--tblr-light); color: var(--tblr-muted); border: 1px solid var(--tblr-border-color); }
+
+.cal-pill-more { font-size: .6875rem; font-weight: 600; color: var(--tblr-primary); cursor: pointer; background: none; border: none; padding: 0 2px; display: block; text-align: left; }
+.cal-month-nav { display: flex; align-items: center; gap: 8px; }
+.cal-month-title { font-size: 1rem; font-weight: 700; min-width: 180px; text-align: center; }
+.cal-nav-btn { width: 30px; height: 30px; border-radius: var(--tblr-border-radius); border: 1px solid var(--tblr-border-color); background: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--tblr-muted); transition: all .15s; }
+.cal-nav-btn:hover { border-color: var(--tblr-primary); color: var(--tblr-primary); }
+.cal-legend { display: flex; gap: 12px; flex-wrap: wrap; font-size: .75rem; color: var(--tblr-muted); align-items: center; }
+.cal-legend-dot { width: 9px; height: 9px; border-radius: 2px; flex-shrink: 0; display: inline-block; margin-right: 4px; vertical-align: middle; }
+.cal-popup { display: none; position: fixed; z-index: 9999; background: #fff; border: 1px solid var(--tblr-border-color); border-radius: var(--tblr-border-radius-lg); box-shadow: var(--tblr-shadow-lg, 0 8px 32px rgba(0,0,0,.12)); width: 300px; padding: 16px; }
+.cal-popup.show { display: block; }
+.cal-popup-close { position: absolute; top: 8px; right: 10px; background: none; border: none; font-size: 1.1rem; color: var(--tblr-muted); cursor: pointer; padding: 2px 6px; line-height: 1; }
+
+
+/* ── 13. RESPONSIVE ── */
+
+@media (max-width: 991px) {
+  .collage-main  { height: 280px; }
+  .collage-small { height: 88px; }
+  .stats-card    { bottom: -16px; left: 10px; }
+}
+@media (max-width: 640px) {
+  .evh-img       { width: 100%; flex: none; height: 160px; }
+  .card.evh      { flex-direction: column !important; }
+}
+@media (max-width: 576px) {
+  .stats-card    { position: static; margin-top: 16px; }
+}
+
+
+/* ── 14. PRINT ── */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust:         exact !important;
+    color-adjust:               exact !important;
+  }
+
+  [style*="display:none"],
+  [style*="display: none"] { display: block !important; }
+
+  .card,
+  .classification-card,
+  .referral-card,
+  .join-tier,
+  .join-tiers,
+  .join-info,
+  .evh,
+  .past-card,
+  .cal-cell { break-inside: avoid !important; }
+
+  * {
+    box-shadow:  none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust:         exact !important;
+  }
+
+  .container,
+  .container-xl,
+  .container-fluid {
+    max-width: 100% !important;
+    width:     100% !important;
+  }
+
+  .navbar,
+  #navbar,
+  #footer,
+  .modal,
+  .toast,
+  .cal-popup { display: none !important; }
+}
