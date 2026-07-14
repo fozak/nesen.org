@@ -226,13 +226,7 @@ async function loadComponents() {
     if (isHome || isMatch) link.classList.add('active');
   });
 
-  // Re-init Bootstrap collapse for dynamically injected navbar
-  if (window.bootstrap) {
-    document.querySelectorAll('.navbar-toggler').forEach(toggler => {
-      const target = document.querySelector(toggler.dataset.bsTarget);
-      if (target) new bootstrap.Collapse(target, { toggle: false });
-    });
-  }
+
 
   document.dispatchEvent(new Event('components:ready'));
   initEditor();

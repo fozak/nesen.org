@@ -135,9 +135,6 @@
 </head>
 <body class="body-marketing body-gradient">
 
-      <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
 <script type="application/json" id="page-data">
 {
   "slug":    "building-sitemap",
@@ -294,21 +291,26 @@
   <script src="/components.js" defer></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler-theme.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/pocketbase@0.21.3/dist/pocketbase.umd.js"></script>
-  <script src="/CW-state.js"></script>
-  <script src="/CW-config.js"></script>
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
+<script src="/CW-state.js"></script>
+<script src="/CW-config.js"></script>
 <script src="/CW-utils.js"></script>
 <script src="/CW-run.js"></script>
-
 <script src="/pb-adapter-pocketbase.js"></script>
 <script src="/auth.js"></script>
 <script src="/CW-ui.js"></script>
+<script src="/nesen-ui.js"></script>
 
-
- <script src="/nesen-ui.js"></script>
+<script src="/boot.js"></script>
+<script>
+  window.addEventListener('CW:booted', () => {
+    // cwStateFromUrl() only if nesen.org needs CW routing
+    // otherwise boot.js already called authRestore() — navbar is set
+  });
+</script>
 
 
 </body>
