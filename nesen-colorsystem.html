@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NESEN Design System</title>
+<style>
+  body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: #F4F6FA;
+    margin: 0;
+    padding: 28px;
+    color: #1C2B4A;
+  }
+
+  h1 { font-size: 1.6rem; font-weight: 800; margin-bottom: 4px; color: #123C7A; }
+  .tagline { font-size: 0.85rem; color: #6B7B99; margin-bottom: 36px; }
+  h2 { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #6B7B99; margin: 32px 0 12px; }
+
+  .palette { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; }
+
+  .color-swatch {
+    width: 108px; height: 108px;
+    border-radius: 10px;
+    display: flex; flex-direction: column;
+    align-items: flex-start; justify-content: flex-end;
+    padding: 8px 10px;
+    font-size: 11px; font-weight: 700;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+    gap: 2px;
+  }
+  .color-swatch span { font-size: 10px; font-weight: 400; opacity: .8; }
+
+  .gradient-swatch {
+    width: 190px; height: 108px;
+    border-radius: 10px;
+    display: flex; flex-direction: column;
+    align-items: flex-start; justify-content: flex-end;
+    padding: 8px 12px;
+    color: #fff; font-size: 11px; font-weight: 700;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+    gap: 2px;
+  }
+  .gradient-swatch span { font-size: 10px; font-weight: 400; opacity: .8; }
+
+  /* Buttons */
+  .btns { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; }
+  .btn {
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 14px; font-weight: 600;
+    cursor: pointer;
+    transition: transform .15s, box-shadow .15s;
+    border: none;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.15); }
+
+  .btn-primary   { background: #2B6CB8; color: #fff; }
+  .btn-primary:hover { background: #123C7A; }
+
+  .btn-navy      { background: #123C7A; color: #fff; }
+  .btn-navy:hover { background: #0A2550; }
+
+  .btn-success   { background: #2E7D32; color: #fff; }
+  .btn-success:hover { background: #1B5E20; }
+
+  .btn-coral-fill { background: #D4541A; color: #fff; }
+  .btn-coral-fill:hover { background: #A83E10; }
+
+  .btn-ev-cal {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-size: 14px; font-weight: 600;
+    border: 1.5px solid #D4541A;
+    color: #D4541A;
+    background: transparent;
+    cursor: pointer;
+    transition: background .15s, color .15s, transform .15s;
+  }
+  .btn-ev-cal:hover { background: #D4541A; color: #fff; transform: translateY(-1px); }
+
+  .btn-outline {
+    background: transparent;
+    border: 1.5px solid #2B6CB8;
+    color: #2B6CB8;
+  }
+  .btn-outline:hover { background: #E8EFF8; }
+
+  /* Cards */
+  .cards { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 8px; }
+  .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(18,60,122,0.07);
+    flex: 1; min-width: 220px; max-width: 300px;
+  }
+  .card-header { font-weight: 700; font-size: 0.9rem; margin-bottom: 8px; }
+  .card-content { color: #6B7B99; font-size: 0.85rem; line-height: 1.6; }
+
+  /* Classification badges */
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; align-items: center; }
+  .badge-classification {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 0.7rem; font-weight: 700; letter-spacing: .04em;
+    text-transform: uppercase; padding: 3px 10px;
+    border-radius: 100px; white-space: nowrap;
+  }
+  .badge--taken   { background: rgba(18,60,122,.10); color: #123C7A; border: 1px solid rgba(18,60,122,.20); }
+  .badge--open    { background: rgba(46,125,50,.10);  color: #2E7D32; border: 1px solid rgba(46,125,50,.25); }
+  .badge--pending { background: rgba(212,84,26,.10);  color: #D4541A; border: 1px solid rgba(212,84,26,.20); }
+
+  /* Meeting ribbon */
+  .meeting-ribbon {
+    display: inline-flex; align-items: center; gap: 20px; flex-wrap: wrap;
+    padding: 10px 20px;
+    background: rgba(18,60,122,.06);
+    border: 1px solid rgba(18,60,122,.12);
+    border-radius: 8px;
+    font-size: 0.8125rem; font-weight: 600; color: #123C7A;
+    margin-bottom: 8px;
+  }
+
+  /* Cal pills */
+  .cal-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .cal-pill {
+    padding: 2px 10px; border-radius: 3px;
+    font-size: 0.6875rem; font-weight: 600; line-height: 1.6;
+    white-space: nowrap;
+  }
+  .cal-pill--Referral-Meeting { background: rgba(43,108,184,.12);  color: #2B6CB8; }
+  .cal-pill--Pitch-Night      { background: rgba(212,84,26,.12);   color: #D4541A; }
+  .cal-pill--One-to-One       { background: rgba(46,125,50,.12);   color: #2E7D32; }
+  .cal-pill--Guest-Visit      { background: rgba(18,60,122,.08);   color: #123C7A; }
+
+  /* Token table */
+  .token-table { border-collapse: collapse; width: 100%; font-size: 0.8rem; margin-bottom: 8px; }
+  .token-table th { text-align: left; padding: 6px 12px; background: #E8EFF8; color: #123C7A; font-size: 0.65rem; text-transform: uppercase; letter-spacing: .06em; }
+  .token-table td { padding: 7px 12px; border-bottom: 1px solid #E2E8F3; font-family: 'Courier New', monospace; font-size: 0.75rem; }
+  .token-table tr:last-child td { border-bottom: none; }
+  .dot { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+
+  .section-divider { border: none; border-top: 1px solid #E2E8F3; margin: 36px 0 0; }
+</style>
+</head>
+<body>
+
+<h1>NESEN Design System</h1>
+<p class="tagline">New England Science &amp; Entrepreneurship Network · nesen.org · Navy · Forest Green · Coral</p>
+
+<!-- ── BLUE RAMP ── -->
+<h2>Navy / Primary ramp — from logo #123C7A</h2>
+<div class="palette">
+  <div class="color-swatch" style="background:#E8EFF8; color:#0A2550;">--nesen-blue-50<span>#E8EFF8</span></div>
+  <div class="color-swatch" style="background:#C0D1EC; color:#0A2550;">--nesen-blue-100<span>#C0D1EC</span></div>
+  <div class="color-swatch" style="background:#7AA3D4; color:#0A2550;">--nesen-blue-300<span>#7AA3D4</span></div>
+  <div class="color-swatch" style="background:#2B6CB8; color:#fff;">--nesen-blue-500<span>#2B6CB8 primary</span></div>
+  <div class="color-swatch" style="background:#123C7A; color:#fff;">--nesen-blue-700<span>#123C7A logo</span></div>
+  <div class="color-swatch" style="background:#0A2550; color:#fff;">--nesen-blue-900<span>#0A2550</span></div>
+</div>
+
+<!-- ── GREEN RAMP ── -->
+<h2>Forest Green / Success ramp — from logo pine #2E7D32</h2>
+<div class="palette">
+  <div class="color-swatch" style="background:#E8F5E9; color:#1B5E20;">--nesen-green-50<span>#E8F5E9</span></div>
+  <div class="color-swatch" style="background:#A5D6A7; color:#1B5E20;">--nesen-green-200<span>#A5D6A7</span></div>
+  <div class="color-swatch" style="background:#4CAF50; color:#fff;">--nesen-green-400<span>#4CAF50</span></div>
+  <div class="color-swatch" style="background:#2E7D32; color:#fff;">--nesen-green-700<span>#2E7D32 logo</span></div>
+  <div class="color-swatch" style="background:#1B5E20; color:#fff;">--nesen-green-900<span>#1B5E20</span></div>
+</div>
+
+<!-- ── CORAL RAMP ── -->
+<h2>Coral / Accent — third hue, warm contrast</h2>
+<div class="palette">
+  <div class="color-swatch" style="background:#FDF0EB; color:#A83E10;">--nesen-coral-50<span>#FDF0EB</span></div>
+  <div class="color-swatch" style="background:#F4BDA8; color:#A83E10;">--nesen-coral-200<span>#F4BDA8</span></div>
+  <div class="color-swatch" style="background:#D4541A; color:#fff;">--accent-coral<span>#D4541A</span></div>
+  <div class="color-swatch" style="background:#A83E10; color:#fff;">--nesen-coral-700<span>#A83E10</span></div>
+</div>
+
+<!-- ── NEUTRALS ── -->
+<h2>Neutrals — blue-grey cast</h2>
+<div class="palette">
+  <div class="color-swatch" style="background:#F4F6FA; color:#1C2B4A; box-shadow:0 0 0 1px #E2E8F3;">page bg<span>#F4F6FA</span></div>
+  <div class="color-swatch" style="background:#E2E8F3; color:#1C2B4A;">border<span>#E2E8F3</span></div>
+  <div class="color-swatch" style="background:#6B7B99; color:#fff;">muted<span>#6B7B99</span></div>
+  <div class="color-swatch" style="background:#1C2B4A; color:#fff;">body text<span>#1C2B4A</span></div>
+</div>
+
+<!-- ── GRADIENTS ── -->
+<h2>Gradient reference</h2>
+<div class="palette">
+  <div class="gradient-swatch" style="background: linear-gradient(135deg, #E8EFF8, #7AA3D4, #2B6CB8);">Blue ramp<span>#E8EFF8 → #2B6CB8</span></div>
+  <div class="gradient-swatch" style="background: linear-gradient(135deg, #2B6CB8, #123C7A, #0A2550);">Deep navy<span>#2B6CB8 → #0A2550</span></div>
+  <div class="gradient-swatch" style="background: linear-gradient(135deg, #FDF0EB, #F4BDA8, #D4541A);">Coral accent<span>#FDF0EB → #D4541A</span></div>
+  <div class="gradient-swatch" style="background: linear-gradient(160deg, #E8EFF8 0%, #F4F6FA 55%, #E8F5E9 100%);">Page gradient<span>body-gradient</span></div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ── BUTTONS ── -->
+<h2>Buttons</h2>
+<div class="btns">
+  <button class="btn btn-primary">Primary</button>
+  <button class="btn btn-navy">Navy / Hover state</button>
+  <button class="btn btn-success">Success / Green</button>
+  <button class="btn btn-coral-fill">Coral filled</button>
+  <button class="btn-ev-cal">📅 Add to calendar</button>
+  <button class="btn btn-outline">Outline</button>
+</div>
+
+<hr class="section-divider">
+
+<!-- ── CLASSIFICATION BADGES ── -->
+<h2>Classification slot badges</h2>
+<div class="badges">
+  <span class="badge-classification badge--taken">● Accounting — taken</span>
+  <span class="badge-classification badge--open">● Marketing — open</span>
+  <span class="badge-classification badge--pending">● Legal — visitor pending</span>
+</div>
+
+<hr class="section-divider">
+
+<!-- ── CARDS ── -->
+<h2>Cards</h2>
+<div class="cards">
+  <div class="card">
+    <div class="card-header" style="color:#123C7A;">Referral Exchange</div>
+    <div class="card-content">Warm introductions replace cold outreach. Every member is a non-competing referral partner.</div>
+  </div>
+  <div class="card">
+    <div class="card-header" style="color:#2E7D32;">Open Classification</div>
+    <div class="card-content">One seat per industry. Your classification is yours exclusively — no one in the room competes for your clients.</div>
+  </div>
+  <div class="card">
+    <div class="card-header" style="color:#D4541A;">Next Pitch Night</div>
+    <div class="card-content">10–12 minute pitch. Every member contributes one observation and one introduction. Free.</div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ── MEETING RIBBON ── -->
+<h2>Meeting ribbon</h2>
+<div class="meeting-ribbon">
+  <span>📅 Every Thursday</span>
+  <span>🕡 6:30 PM</span>
+  <span>📍 1 Broadway, 5th Floor, Cambridge MA</span>
+  <span>✓ Free</span>
+</div>
+
+<hr class="section-divider">
+
+<!-- ── CALENDAR PILLS ── -->
+<h2>Calendar event taxonomy</h2>
+<div class="cal-pills">
+  <span class="cal-pill cal-pill--Referral-Meeting">Referral Meeting</span>
+  <span class="cal-pill cal-pill--Pitch-Night">Pitch Night</span>
+  <span class="cal-pill cal-pill--One-to-One">One-to-One</span>
+  <span class="cal-pill cal-pill--Guest-Visit">Guest Visit</span>
+</div>
+
+<hr class="section-divider">
+
+<!-- ── TOKEN TABLE ── -->
+<h2>CSS custom properties reference</h2>
+<table class="token-table">
+  <thead>
+    <tr><th>Token</th><th>Value</th><th>Role</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><span class="dot" style="background:#2B6CB8"></span>--tblr-primary</td><td>#2B6CB8</td><td>Buttons, links, active states</td></tr>
+    <tr><td><span class="dot" style="background:#123C7A"></span>--tblr-primary-dark</td><td>#123C7A</td><td>Navbar bg, hover, logo exact</td></tr>
+    <tr><td><span class="dot" style="background:#E8EFF8"></span>--tblr-primary-lt</td><td>#E8EFF8</td><td>Card tints, badge backgrounds</td></tr>
+    <tr><td><span class="dot" style="background:#2E7D32"></span>--tblr-success</td><td>#2E7D32</td><td>Open slots, positive badges, green accents</td></tr>
+    <tr><td><span class="dot" style="background:#E8F5E9"></span>--tblr-success-lt</td><td>#E8F5E9</td><td>Success tint backgrounds</td></tr>
+    <tr><td><span class="dot" style="background:#D4541A"></span>--accent-coral</td><td>#D4541A</td><td>btn-ev-cal, pending badges, CTAs needing warmth</td></tr>
+    <tr><td><span class="dot" style="background:#F4F6FA; border:1px solid #E2E8F3"></span>--tblr-body-bg</td><td>#F4F6FA</td><td>Page background</td></tr>
+    <tr><td><span class="dot" style="background:#1C2B4A"></span>--tblr-body-color</td><td>#1C2B4A</td><td>Body text</td></tr>
+    <tr><td><span class="dot" style="background:#6B7B99"></span>--tblr-muted</td><td>#6B7B99</td><td>Secondary text, labels</td></tr>
+    <tr><td><span class="dot" style="background:#E2E8F3; border:1px solid #ccc"></span>--tblr-border-color</td><td>#E2E8F3</td><td>Card borders, dividers</td></tr>
+  </tbody>
+</table>
+
+</body>
+</html>

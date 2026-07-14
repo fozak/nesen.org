@@ -120,6 +120,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.4.0/dist/css/tabler-marketing.min.css">
   <link rel="stylesheet" href="/nesen.css">
 
+
+
+
   <!-- ── Google Analytics ── -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TKN48R0YJX"></script>
   <script>
@@ -131,6 +134,9 @@
 
 </head>
 <body class="body-marketing body-gradient">
+
+      <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
 <script type="application/json" id="page-data">
 {
@@ -151,7 +157,10 @@
 
 <body class="blog-building-sitemap">
 
-<div id="navbar" data-loader="../components/navbar.html"></div>
+<!--<div id="navbar" data-loader="../components/navbar.html"></div>-->
+
+<div id="nav_container"></div>
+
 
 <main id="main-content" class="py-5">
   <section class="c-hero-content c-hero-content-1">
@@ -292,8 +301,14 @@
   <script src="/CW-state.js"></script>
   <script src="/CW-config.js"></script>
 <script src="/CW-utils.js"></script>
-<script src="/auth.js"></script>
+<script src="/CW-run.js"></script>
+
 <script src="/pb-adapter-pocketbase.js"></script>
+<script src="/auth.js"></script>
+<script src="/CW-ui.js"></script>
+
+
+ <script src="/nesen-ui.js"></script>
 
 
 </body>

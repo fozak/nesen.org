@@ -312,5 +312,7 @@ Object.assign(globalThis, {
   SYSTEM_MANAGER_ROLE_ID,
 });
 
+authRestore();
+
 console.log('✅ auth.js loaded');
 

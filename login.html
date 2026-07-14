@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in — NESEN</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://rsms.me">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.4.0/dist/css/tabler.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="nesen.css">
+
+  <style>
+    .page-center { min-height: 100vh; }
+    .brand-logo {
+      font-family: 'Inter var', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #123C7A;
+      font-feature-settings: "cv01" 1;
+      text-decoration: none;
+    }
+    .brand-logo:hover { color: #123C7A; }
+    .btn-primary {
+      background-color: #2B6CB8;
+      border-color: #2B6CB8;
+    }
+    .btn-primary:hover {
+      background-color: #123C7A;
+      border-color: #123C7A;
+    }
+  </style>
+</head>
+
+<body class="antialiased d-flex flex-column" style="background: linear-gradient(160deg, #E8EFF8 0%, #F4F6FA 55%, #E8F5E9 100%); min-height: 100vh;">
+
+<div class="page page-center">
+  <div class="container container-tight py-4">
+
+    <!-- Brand -->
+    <div class="text-center mb-4">
+      <a href="/" class="brand-logo">NESEN</a>
+      <p class="text-muted mt-1 mb-0" style="font-size: 0.8rem;">New England Science &amp; Entrepreneurship Network</p>
+    </div>
+
+    <div class="card card-md shadow-sm">
+      <div class="card-body">
+
+        <h2 class="card-title text-center mb-4" style="font-size: 1.1rem; font-weight: 600;">Sign in to your account</h2>
+
+        <!-- Alert -->
+        <div id="alert" class="alert alert-danger d-none mb-3" role="alert">
+          <i class="ti ti-alert-circle me-2"></i>
+          <span id="alert_msg"></span>
+        </div>
+
+        <!-- Success -->
+        <div id="success" class="d-none text-center py-3">
+          <div class="mb-3">
+            <i class="ti ti-circle-check text-success" style="font-size: 2.5rem;"></i>
+          </div>
+          <p class="fw-semibold mb-1">Signed in successfully</p>
+          <p class="text-muted small">Redirecting…</p>
+        </div>
+
+        <!-- Form -->
+        <div id="form_section">
+        <form onsubmit="return false;">
+
+          <!-- Email -->
+          <div class="mb-3">
+            <label class="form-label required" for="email">Email address</label>
+            <input type="email" id="email" class="form-control"
+              placeholder="you@example.com"
+              autocomplete="email">
+            <div class="invalid-feedback" id="email_err"></div>
+          </div>
+
+          <!-- Password -->
+          <div class="mb-3">
+            <label class="form-label required" for="password">
+              Password
+              <span class="form-label-description">
+                <a href="#" id="forgot_link">Forgot password?</a>
+              </span>
+            </label>
+            <div class="input-group input-group-flat">
+              <input type="password" id="password" class="form-control"
+                placeholder="Your password"
+                autocomplete="current-password">
+              <span class="input-group-text">
+                <a href="#" id="toggle_pw" class="link-secondary" title="Show / hide password">
+                  <i class="ti ti-eye" id="toggle_pw_icon"></i>
+                </a>
+              </span>
+            </div>
+            <div class="invalid-feedback" id="pw_err"></div>
+          </div>
+
+          <!-- Submit -->
+          <div class="mt-4">
+            <button id="submit_btn" type="button" class="btn btn-primary w-100">
+              <span id="btn_text">Sign in</span>
+              <span id="btn_spinner" class="spinner-border spinner-border-sm ms-2 d-none" role="status"></span>
+            </button>
+          </div>
+
+        </div>
+          </form>
+        <!-- /form_section -->
+
+      </div>
+    </div>
+
+    <!-- Footer links -->
+    <div class="text-center text-muted mt-3" style="font-size: 0.8rem;">
+      Not a member yet?
+      <a href="/apply.html" class="fw-semibold" style="color: #2B6CB8;">Apply for membership</a>
+      &nbsp;·&nbsp;
+      <a href="/visit.html" class="text-muted">Visit as guest</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Scripts -->
+ <script src="/components.js" defer></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler-theme.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pocketbase@latest/dist/pocketbase.umd.js"></script>
+  <script src="/CW-state.js"></script>
+  <script src="/CW-config.js"></script>
+<script src="/CW-utils.js"></script>
+<script src="/auth.js"></script>
+<script src="/pb-adapter-pocketbase.js"></script>
+<script src="/CW-ui.js"></script>
+
+
+ <script src="/nesen-ui.js"></script>
+
+
+<script>
+(function () {
+
+  // ── DOM refs ──
+  const emailEl    = document.getElementById('email');
+  const pwEl       = document.getElementById('password');
+  const submitBtn  = document.getElementById('submit_btn');
+  const btnText    = document.getElementById('btn_text');
+  const btnSpinner = document.getElementById('btn_spinner');
+  const alertEl    = document.getElementById('alert');
+  const alertMsg   = document.getElementById('alert_msg');
+  const formSec    = document.getElementById('form_section');
+  const successSec = document.getElementById('success');
+  const togglePw   = document.getElementById('toggle_pw');
+  const toggleIcon = document.getElementById('toggle_pw_icon');
+  const forgotLink = document.getElementById('forgot_link');
+  const emailErr   = document.getElementById('email_err');
+  const pwErr      = document.getElementById('pw_err');
+
+  // ── Already logged in → redirect ──
+  if (globalThis.pb?.authStore?.isValid) {
+    window.location.href = '/members.html';
+    return;
+  }
+
+  // ── Show / hide password ──
+  togglePw.addEventListener('click', (e) => {
+    e.preventDefault();
+    const show = pwEl.type === 'password';
+    pwEl.type  = show ? 'text' : 'password';
+    toggleIcon.className = show ? 'ti ti-eye-off' : 'ti ti-eye';
+  });
+
+  // ── Forgot password ──
+  forgotLink.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const email = emailEl.value.trim();
+    if (!email) {
+      showAlert('Enter your email address first.');
+      emailEl.focus();
+      return;
+    }
+    try {
+      await globalThis.pb.collection('users').requestPasswordReset(email);
+      showAlert('Password reset email sent — check your inbox.', 'success');
+    } catch {
+      showAlert('Could not send reset email. Check the address and try again.');
+    }
+  });
+
+  // ── Helpers ──
+  function showAlert(msg, type = 'danger') {
+    alertMsg.textContent = msg;
+    alertEl.className = `alert alert-${type} mb-3`;
+    alertEl.classList.remove('d-none');
+  }
+
+  function clearErrors() {
+    alertEl.classList.add('d-none');
+    emailEl.classList.remove('is-invalid');
+    pwEl.classList.remove('is-invalid');
+    emailErr.textContent = '';
+    pwErr.textContent    = '';
+  }
+
+  function setLoading(on) {
+    submitBtn.disabled    = on;
+    btnSpinner.classList.toggle('d-none', !on);
+    btnText.textContent   = on ? 'Signing in…' : 'Sign in';
+  }
+
+  // ── Submit ──
+  async function submit() {
+    clearErrors();
+
+    const email    = emailEl.value.trim();
+    const password = pwEl.value;
+    let valid = true;
+
+    if (!email) {
+      emailEl.classList.add('is-invalid');
+      emailErr.textContent = 'Email is required.';
+      valid = false;
+    }
+    if (!password) {
+      pwEl.classList.add('is-invalid');
+      pwErr.textContent = 'Password is required.';
+      valid = false;
+    }
+    if (!valid) return;
+
+    setLoading(true);
+
+    try {
+      await authLogin(email, password);
+
+      // Show success then redirect
+      formSec.classList.add('d-none');
+      successSec.classList.remove('d-none');
+      setTimeout(() => { window.location.href = '/members.html'; }, 1000);
+
+    } catch (err) {
+      setLoading(false);
+      const msg = err?.response?.message || err?.message || '';
+      if (msg.toLowerCase().includes('invalid') || msg.toLowerCase().includes('credentials')) {
+        showAlert('Invalid email or password.');
+      } else {
+        showAlert(msg || 'Sign in failed. Please try again.');
+      }
+    }
+  }
+
+  submitBtn.addEventListener('click', submit);
+
+  // Enter key on either field
+  emailEl.addEventListener('keydown',  (e) => { if (e.key === 'Enter') pwEl.focus(); });
+  pwEl.addEventListener('keydown',     (e) => { if (e.key === 'Enter') submit(); });
+
+})();
+</script>
+
+</body>
+</html>
