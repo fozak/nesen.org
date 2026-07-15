@@ -82,9 +82,7 @@ body {
   background-color: var(--nesen-body-bg);
 }
 
-.body-gradient {
-  background: linear-gradient(160deg, #E8EFF8 0%, #F4F6FA 55%, #E8F5E9 100%);
-}
+
 
 
 /* ── 3. NAVBAR ── */
@@ -482,10 +480,7 @@ body {
     text-shadow: none !important;
   }
 
-  body {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust:         exact !important;
-  }
+
 
   .container,
   .container-xl,
@@ -500,4 +495,24 @@ body {
   .modal,
   .toast,
   .cal-popup { display: none !important; }
+}
+
+
+article { font-size: 1.0rem; }
+article h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.15rem; font-weight: 600; }
+article h3 { margin-top: 1.75rem; margin-bottom: 0.6rem; font-size: 1rem; font-weight: 600; }
+.policy-meta { font-size: 0.85rem; color: var(--tblr-secondary); }
+.notice-box { ... }
+.rights-grid { ... }
+.rights-card { ... }
+.rights-card-title { ... }
+.rights-card-body { ... }
+.lawful-table { ... }
+.basis-badge { ... }
+.b-contract, .b-legitimate, .b-consent, .b-legal { ... }
+@media (max-width: 600px) { .rights-grid { grid-template-columns: 1fr; } }
+
+#page-nav ul {
+  list-style: none;
+  padding-left: 0;
 }
