@@ -336,6 +336,37 @@
 
   <!-- form-->
 
+
+  <!-- VISIT — Thursday slot picker -->
+<section id="visit" class="section">
+  <div class="container">
+    <div class="row g-xl-6">
+      <div class="col-lg-4">
+        <div class="section-header text-start sticky-top" style="top:5rem;">
+          <div class="section-title">Visit as a guest</div>
+          <p class="section-description">Pick any Thursday. Show up at 6:30 PM. No application, no fee. Come with a one-minute description of what you do and what introduction would help you most.</p>
+          <div class="meeting-ribbon mt-3">
+            <i class="ti ti-map-pin"></i> 1 Broadway, 5th Floor, Cambridge MA 02142
+          </div>
+        </div>
+      </div>
+      <div class="col-lg">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Choose a Thursday</h3>
+          </div>
+          <div class="card-body p-0">
+            <div id="thursday-slots"></div>
+          </div>
+          <div class="card-footer text-secondary small">
+            After selecting a date, fill in your details below. You will receive a confirmation email with what to expect at your first visit.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
   <section id="apply" class="section section-light">
   <div class="container">
     <div class="row g-xl-6">
@@ -353,6 +384,10 @@
           </div>
           <div class="card-body">
             <form class="space-y">
+              <div id="selected-visit-date" class="alert alert-info d-none">
+  <i class="ti ti-calendar-check me-2"></i>
+  <span id="selected-visit-label"></span>
+</div>
 
               <div class="row row-cols-2 g-4">
                 <div>

@@ -226,10 +226,40 @@ async function loadComponents() {
     if (isHome || isMatch) link.classList.add('active');
   });
 
-
+   initThursdaySlots();
 
   document.dispatchEvent(new Event('components:ready'));
   initEditor();
 }
 
 loadComponents();
+
+//--form
+
+ function initThursdaySlots() {
+  const slots = document.getElementById('thursday-slots');
+  if (!slots) return;
+
+  const now = new Date();
+  const first = new Date(now);
+  first.setDate(now.getDate() + (4 - now.getDay() + 7) % 7 || 7);
+
+  for (let i = 0; i < 8; i++) {
+    const d = new Date(first);
+    d.setDate(first.getDate() + i * 7);
+    const label = d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+    slots.innerHTML += `
+      <div class="d-flex align-items-center justify-content-between px-4 py-3 border-bottom">
+        <div class="fw-semibold">${label}</div>
+        <button class="btn btn-primary btn-sm" onclick="selectVisitDate('${label}')">
+          <i class="ti ti-calendar-plus me-1"></i>Register
+        </button>
+      </div>`;
+  }
+}
+
+window.selectVisitDate = function (label) {
+  document.getElementById('selected-visit-label').innerHTML = `Visiting on <strong>${label} at 6:30 PM</strong>`;
+  document.getElementById('selected-visit-date').classList.remove('d-none');
+  document.getElementById('apply').scrollIntoView({ behavior: 'smooth' });
+};
